@@ -26,82 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="preprocess-region.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-region.inc">
+      <file leaf-file-name="products.module" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="50" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300">
+            <state line="128" column="27" selection-start="4299" selection-end="4299" vertical-scroll-proportion="2.3908045" vertical-offset="480" max-vertical-offset="5100">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preprocess-block.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-block.inc">
+      <file leaf-file-name="products.install" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="50" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preprocess-comment.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-comment.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="2" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="880">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/node.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="33" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="10" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1160">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="block1.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="140">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasktheme.info" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="440">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.info" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/products/products.info">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.install" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/products/products.install">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="747" selection-end="747" vertical-scroll-proportion="0.4347826" vertical-offset="0" max-vertical-offset="874">
+            <state line="17" column="6" selection-start="729" selection-end="729" vertical-scroll-proportion="-13.6" vertical-offset="0" max-vertical-offset="500">
               <folding />
             </state>
           </provider>
@@ -110,10 +47,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
+      <file leaf-file-name="products-page.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2720">
+            <state line="3" column="44" selection-start="123" selection-end="123" vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products-block.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products-content.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="20" selection-start="271" selection-end="271" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="200">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasktheme.info" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="21" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
               <folding />
             </state>
           </provider>
@@ -138,11 +102,19 @@
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-block.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-comment.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/templates/node.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/products/products.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/products/products.install" />
+        <option value="$PROJECT_DIR$/sites/all/modules/products/products.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/product-content.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/main.css" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.install" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.module" />
       </list>
     </option>
   </component>
@@ -292,66 +264,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasktheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasktheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="preprocess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -375,6 +287,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -409,8 +325,9 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../stansberry" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -418,6 +335,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -431,7 +361,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -439,7 +369,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15654951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15654951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -468,7 +398,9 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-region.inc">
@@ -518,23 +450,6 @@
         <state line="16" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="440">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/products/products.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/products/products.install">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="500">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
@@ -602,13 +517,6 @@
         <state line="10" column="0" selection-start="347" selection-end="382" vertical-scroll-proportion="0.22197558" vertical-offset="0" max-vertical-offset="901" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="10" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1160">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="140">
@@ -618,21 +526,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2720">
+        <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.52873564" vertical-offset="1800" max-vertical-offset="2720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="107" selection-start="1206" selection-end="1291" vertical-scroll-proportion="0.3678161" vertical-offset="240" max-vertical-offset="1160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="29" selection-start="189" selection-end="189" vertical-scroll-proportion="0.1557286" vertical-offset="0" max-vertical-offset="899">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+        <state line="5" column="21" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/products/products.info">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="44" selection-start="123" selection-end="123" vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="20" selection-start="271" selection-end="271" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="6" selection-start="729" selection-end="729" vertical-scroll-proportion="-13.6" vertical-offset="0" max-vertical-offset="500">
           <folding />
         </state>
       </provider>
@@ -640,14 +590,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/products/products.install">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="747" selection-end="747" vertical-scroll-proportion="0.4347826" vertical-offset="0" max-vertical-offset="874">
+        <state line="128" column="27" selection-start="4299" selection-end="4299" vertical-scroll-proportion="2.3908045" vertical-offset="480" max-vertical-offset="5100">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
   </component>

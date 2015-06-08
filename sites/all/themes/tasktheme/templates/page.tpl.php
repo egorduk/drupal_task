@@ -26,7 +26,7 @@
         </div>
     </div>
     <div id="page" class="container">
-        <div id="banner"><a href="#"><img src="images/img02.jpg" width="940" height="400" alt="" /></a></div>
+        <div id="banner"><!--<a href="#"><img src="images/img02.jpg" width="940" height="400" alt="" /></a>--></div>
         <div id="three-column">
             <div id="column1">
                 <?php print render($page['block1']);?>
