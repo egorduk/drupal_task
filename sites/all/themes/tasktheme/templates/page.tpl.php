@@ -47,7 +47,7 @@
     </div>
 </div>
 <div id="footer">
-    <p>Copyright (c) 2012 <a href="http://www.drupalfly.ru" title="drupalfly.ru" target="_blank">Drupalfly.ru</a>. All rights reserved.</p>
+    <p>Copyright (c) 2015</p>
 </div>
 </body>
 </html>
