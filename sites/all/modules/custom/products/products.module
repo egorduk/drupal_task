@@ -1,0 +1,261 @@
+<?php
+
+function products_block_info() {
+    $blocks['products'] = array(
+        'info'  => t('Products'),
+        'cache' => DRUPAL_CACHE_PER_ROLE
+    );
+    return $blocks;
+}
+
+function products_menu() {
+    $items = array();
+    $items['admin/config/content/products'] = array(
+        'title'            => 'Products',
+        'description'      => 'Configure',
+        'page callback'    => 'products_list',
+        'access arguments' => array('administer site configuration'),
+    );
+    $items['admin/config/content/products/list'] = array(
+        'title'  => 'Products list',
+        'type'   => MENU_DEFAULT_LOCAL_TASK,
+        'weight' => 1,
+    );
+    // add form
+    $items['admin/config/content/product/add'] = array(
+        'title'            => 'Add product',
+        'page callback'    => 'drupal_get_form',
+        'page arguments'   => array('products_form'),
+        'access arguments' => array('administer site configuration'),
+        'type'             => MENU_LOCAL_TASK,
+        'weight'           => 2,
+    );
+    // edit form
+    $items['admin/config/content/product/%product/edit'] = array(
+        'title'            => 'Edit products',
+        'page callback'    => 'drupal_get_form',
+        'page arguments'   => array('products_form', 4),
+        'access arguments' => array('administer site configuration'),
+        'type'             => MENU_CALLBACK,
+    );
+    // delete
+    $items['admin/config/content/product/%product/delete'] = array(
+        'title'            => 'Delete product',
+        //'page callback'    => 'product_delete',
+        'page arguments'   => array('product_delete_form', 4),
+        'page callback' => 'drupal_get_form',
+        'access arguments' => array('administer site configuration'),
+        'type'             => MENU_CALLBACK,
+    );
+    $items['products'] = array(
+        'title'            => 'Products',
+        'page callback'    => '_products_page',
+        'access arguments' => array('access content'),
+    );
+    $items['product/%product/items'] = array(
+        'title'            => 'Current product',
+        'page callback'    => 'product_content',
+        'page arguments'   => array(1),
+        'access callback'  => TRUE,
+        'access arguments' => array('access content'),
+        'type'             => MENU_CALLBACK,
+    );
+    return $items;
+}
+
+function products_form($form, &$form_state, $product = null) {
+    $form['name'] = array(
+        '#title'         => t('Product name'),
+        '#description'   => t(''),
+        '#type'          => 'textfield',
+        '#default_value' => $product ? $product['name'] : '',
+        '#required'      => true,
+    );
+    $form['url'] = array(
+        '#title'         => t('Product url'),
+        '#description'   => t(''),
+        '#type'          => 'textfield',
+        '#default_value' => $product ? $product['url'] : '',
+        '#required'      => true
+    );
+    $form['submit'] = array(
+        '#type'  => 'submit',
+        '#value' => $product ? t('Save') : t('Add')
+    );
+    if ($product) {
+        $form['id'] = array(
+            '#type'  => 'value',
+            '#value' => $product['id']
+        );
+    }
+    return $form;
+}
+
+function product_delete_form($form, &$form_state, $product) {
+    $form = confirm_form($form, t("Confirm dialog"), 'admin/config/content/products', t("Delete current record?"), t("Yes"), t("No"));
+    $form_state['product'] = $product;
+    return $form;
+}
+
+function product_delete_form_submit($form, &$form_state) {
+    if (isset($form_state['product'])) {
+        $form_state['rebuild'] = TRUE;
+        product_delete($form_state['product']);
+        drupal_set_message(t('Product deleted!'));
+        drupal_goto('admin/config/content/products');
+    }
+}
+
+function products_form_validate($form, &$form_state) {
+    /*$url = $form_state['values']['url'];
+    if (fopen($url, "r")) {
+        libxml_use_internal_errors(true);
+        $product = simplexml_load_file($url);
+        if (empty($product)) {
+            form_set_error('url', t('URL is invalid!'));
+        }
+    } else {
+        form_set_error('url', t('URL is invalid!'));
+    }*/
+}
+
+function products_form_submit($form, &$form_state) {
+    $product = array(
+        'name'       => $form_state['values']['name'],
+        'url'        => $form_state['values']['url'],
+        'created_at' => time(),
+        'updated_at' => time(),
+    );
+    // save edit data
+    if (isset($form_state['values']['id'])) {
+        $product['id'] = $form_state['values']['id'];
+        drupal_write_record('products', $product, 'id');
+        drupal_set_message(t('Product edited!'));
+    } // add new data
+    else {
+        drupal_write_record('products', $product);
+        drupal_set_message(t('Product added!'));
+    }
+    drupal_goto('admin/config/content/products');
+}
+
+function product_load($id) {
+    $product = db_select('products', 'n')
+        ->fields('n', array('id', 'name', 'url', 'created_at', 'updated_at'))
+        ->condition('n.id', $id)
+        ->execute()->fetchAssoc();
+    return $product;
+}
+
+function products_list() {
+    $header = array(
+        array('data' => t('Name')),
+        array('data' => t('URL')),
+        array('data' => t('Actions'))
+    );
+    $products = db_select('products', 'n')
+        ->fields('n', array('id', 'name', 'url'))
+        ->execute()->fetchAll();
+    $row = array();
+    if ($products) {
+        foreach ($products as $product) {
+            $actions = array(
+                l(t('edit'), 'admin/config/content/product/' . $product->id . '/edit'),
+                l(t('delete'), 'admin/config/content/product/' . $product->id . '/delete')
+            );
+            $row [] = array(
+                array('data' => $product->name),
+                array('data' => $product->url),
+                array('data' => implode(' | ', $actions))
+            );
+        }
+    }
+    return theme('table', array(
+        'header' => $header,
+        'rows'   => $row,
+    ));
+}
+
+function product_delete($product) {
+    db_delete('products')
+        ->condition('id', $product['id'])
+        ->execute();
+}
+
+function products_contents($display) {
+    $query = db_select('products', 'n')
+        ->fields('n', array('id', 'name', 'url'))
+        ->orderBy('name', 'DESC');
+    if ($display == 'block') {
+        $query->range(0, 5);
+    }
+    return $query->execute();
+}
+
+function products_block_view($delta = '') {
+    $blocks = array();
+    switch ($delta) {
+        case 'products':
+            $select = db_select('products', 'tc');
+            $select->addField('tc', 'name');
+            $select->addField('tc', 'url');
+            $entries = $select->execute()->fetchAll();
+            $blocks['subject'] = t('List of products');
+            $blocks['content'] = theme('products_block', array('urls' => $entries));
+    }
+    return $blocks;
+}
+
+function _products_page() {
+    drupal_set_title(t('Products'));
+    $result = products_contents('page')->fetchAll();
+    if (!$result) {
+        $page_array['products_arguments'] = array(
+            '#title'  => t('Products page'),
+            '#markup' => t('No products available'),
+        );
+        return $page_array;
+    } else {
+        $page_array = theme('products_page', array('urls' => $result));
+        return $page_array;
+    }
+}
+
+function product_content($product) {
+    $url = $product['url'];
+    libxml_use_internal_errors(true);
+    $p = simplexml_load_file($url);
+    if (!empty($p)) {
+        drupal_set_title($p->channel->title);
+        $page_array = theme('products_content', array('items' => $p));
+    } else {
+        $page_array['products_arguments'] = array(
+            '#title'  => t('All posts'),
+            '#markup' => t('No posts available.'),
+        );
+    }
+    return $page_array;
+}
+
+function products_theme() {
+    return array(
+        'products_block'   => array(
+            'variables' => array(
+                'urls' => NULL
+            ),
+            'template'  => 'products-block'
+        ),
+        'products_page'    => array(
+            'variables' => array(
+                'urls' => NULL
+            ),
+            'template'  => 'products-page'
+        ),
+        'products_content' => array(
+            'variables' => array(
+                'items' => NULL
+            ),
+            'template'  => 'products-content'
+        )
+    );
+}

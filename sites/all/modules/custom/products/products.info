@@ -1,0 +1,8 @@
+name = Products module
+description = Description
+package = «My»
+core = 7.x
+version = 7.x-1.0
+configure = admin/config/content/products
+files[]= products.module
+stylesheets[all][] = main.css
