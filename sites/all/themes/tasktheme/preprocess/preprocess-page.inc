@@ -7,13 +7,13 @@ $vars['header'] = theme('header', array(
     // Имя переменной => значение
     'front_page' => $vars['front_page'],
     'logo' => $vars['logo'],
-    'search_box' => $vars['search_box'],
-    'header_line' => $vars['header_line'],
+    //'search_box' => $vars['search_box'],
+    //'header_line' => $vars['header_line'],
 ));
 $vars['footer'] = theme('footer', array(
     'front_page' => $vars['front_page'],
-    'footer_line' => $vars['footer_line'],
-    'page_bottom' => $vars['page_bottom'],
+    //'footer_line' => $vars['footer_line'],
+    //'page_bottom' => $vars['page_bottom'],
 ));
 // Определяем дополнительные классы для не_главной страницы
 if (!$vars['is_front']) {

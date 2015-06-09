@@ -15,6 +15,7 @@
 <body>
 <div id="wrapper">
     <div id="header-wrapper">
+        <?php echo $messages;?>
         <div id="header" class="container">
             <div id="logo">
                 <h1><a href="#"><?php print $site_name;?></a></h1>

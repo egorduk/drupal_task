@@ -81,7 +81,7 @@ hr {
 
 #header-wrapper {
 	overflow: hidden;
-	height: 80px;
+	height: auto;
 	margin-bottom: 30px;
 	background: url(images/img01.png) repeat;
 	border-bottom: 1px solid #DAD8D8;
