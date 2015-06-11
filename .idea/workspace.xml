@@ -29,7 +29,40 @@
       <file leaf-file-name="products.module" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="38" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.40229884" vertical-offset="1670" max-vertical-offset="5320">
+            <state line="69" column="39" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.5356322" vertical-offset="914" max-vertical-offset="5960">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.install" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="39" selection-start="522" selection-end="522" vertical-scroll-proportion="-10.4" vertical-offset="0" max-vertical-offset="800">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="node.install" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/node/node.install">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="19080">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="320">
               <folding />
             </state>
           </provider>
@@ -38,19 +71,8 @@
       <file leaf-file-name="system.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/system/system.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2860" column="25" selection-start="101442" selection-end="101442" vertical-scroll-proportion="-3.9655173" vertical-offset="57025" max-vertical-offset="80800">
-              <folding>
-                <marker date="1430961198000" expanded="true" signature="61057:61101" placeholder="SELECT * FRO..." />
-                <marker date="1430961198000" expanded="true" signature="76626:76720" placeholder="SELECT mlid,..." />
-                <marker date="1430961198000" expanded="true" signature="80203:80295" placeholder="SELECT filen..." />
-                <marker date="1430961198000" expanded="true" signature="80874:80915" placeholder="SELECT * FRO..." />
-                <marker date="1430961198000" expanded="true" signature="107675:107759" placeholder="SELECT fid F..." />
-                <marker date="1430961198000" expanded="true" signature="127774:127864" placeholder="SELECT df.df..." />
-                <marker date="1430961198000" expanded="true" signature="129275:129330" placeholder="SELECT forma..." />
-                <marker date="1430961198000" expanded="true" signature="131195:131280" placeholder="SELECT dft.t..." />
-                <marker date="1430961198000" expanded="true" signature="134393:134587" placeholder="SELECT df.df..." />
-                <marker date="1430961198000" expanded="true" signature="138631:138709" placeholder="SELECT 1 FRO..." />
-              </folding>
+            <state line="2860" column="25" selection-start="101442" selection-end="101442" vertical-scroll-proportion="0.0" vertical-offset="57200" max-vertical-offset="80860">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,7 +80,7 @@
       <file leaf-file-name="node.module" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/node/node.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2113" column="30" selection-start="69336" selection-end="69336" vertical-scroll-proportion="-7.7222223" vertical-offset="41763" max-vertical-offset="83880">
+            <state line="544" column="0" selection-start="18914" selection-end="18914" vertical-scroll-proportion="218.44827" vertical-offset="17135" max-vertical-offset="83880">
               <folding>
                 <marker date="1430961198000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
                 <marker date="1430961198000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
@@ -87,49 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products.install" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="6" selection-start="729" selection-end="729" vertical-scroll-proportion="-13.6" vertical-offset="0" max-vertical-offset="500">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products-page.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="44" selection-start="123" selection-end="123" vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products-block.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preprocess-page.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-page.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="6" selection-start="625" selection-end="625" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="800">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="preprocess-header.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="-0.6896552" vertical-offset="0" max-vertical-offset="280">
+            <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="280">
               <folding />
             </state>
           </provider>
@@ -138,7 +121,7 @@
       <file leaf-file-name="preprocess-footer.inc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="-5.5172415" vertical-offset="0" max-vertical-offset="280">
+            <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="280">
               <folding />
             </state>
           </provider>
@@ -147,7 +130,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="16" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="6100">
+            <state line="38" column="2" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="6180">
               <folding />
             </state>
           </provider>
@@ -174,9 +157,7 @@
         <option value="$PROJECT_DIR$/sites/all/modules/products/products.install" />
         <option value="$PROJECT_DIR$/sites/all/modules/products/products.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/product-content.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/main.css" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.install" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info" />
@@ -184,7 +165,11 @@
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-page.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/style.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/script.js" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.install" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.module" />
       </list>
     </option>
@@ -222,7 +207,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -511,6 +495,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,9 +503,14 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../stansberry" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -559,22 +549,22 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15654951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14696486" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15814696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -596,150 +586,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-region.inc">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-block.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-comment.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/node.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="10" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1160">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/example.sites.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-node.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="1" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.86238533" vertical-offset="208" max-vertical-offset="1080" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-region.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-block.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-comment.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/node.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/garland/garland.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="347" selection-end="382" vertical-scroll-proportion="0.22197558" vertical-offset="0" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.52873564" vertical-offset="1800" max-vertical-offset="2720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="189" selection-end="189" vertical-scroll-proportion="0.1557286" vertical-offset="0" max-vertical-offset="899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="271" selection-end="271" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="200">
+        <state line="157" column="47" selection-start="5332" selection-end="5332" vertical-scroll-proportion="0.0" vertical-offset="2650" max-vertical-offset="5360">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="729" selection-end="729" vertical-scroll-proportion="-13.6" vertical-offset="0" max-vertical-offset="500">
+        <state line="20" column="17" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="800">
           <folding />
         </state>
       </provider>
@@ -747,91 +603,33 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php">
+    <entry file="file://$PROJECT_DIR$/modules/node/node.install">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
+        <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="19080">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="320">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php">
+    <entry file="file://$PROJECT_DIR$/modules/system/system.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="44" selection-start="123" selection-end="123" vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="240">
+        <state line="2860" column="25" selection-start="101442" selection-end="101442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="80860">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="770" selection-end="770" vertical-scroll-proportion="-2.7586207" vertical-offset="220" max-vertical-offset="1180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-page.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="6" selection-start="625" selection-end="625" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="800">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="-0.6896552" vertical-offset="0" max-vertical-offset="280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="-5.5172415" vertical-offset="0" max-vertical-offset="280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="16" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="6100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/field/field.attach.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1393" column="9" selection-start="55518" selection-end="55518" vertical-scroll-proportion="0.36666667" vertical-offset="27481" max-vertical-offset="28380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/content_types.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="23" selection-start="1107" selection-end="1113" vertical-scroll-proportion="0.33293268" vertical-offset="383" max-vertical-offset="9120">
-          <folding>
-            <element signature="e#7#63#0" expanded="true" />
-            <marker date="1430961198000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/content_types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/node.pages.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13680">
-          <folding>
-            <marker date="1430961198000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/node/node.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2113" column="30" selection-start="69336" selection-end="69336" vertical-scroll-proportion="-7.7222223" vertical-offset="41763" max-vertical-offset="83880">
+        <state line="2113" column="30" selection-start="69336" selection-end="69336" vertical-scroll-proportion="0.0" vertical-offset="42260" max-vertical-offset="83960">
           <folding>
             <marker date="1430961198000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
             <marker date="1430961198000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
@@ -859,27 +657,283 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="2" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="6180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-region.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="50" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-block.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="50" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-comment.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="880" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/node.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="33" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="10" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1160" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="440" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/example.sites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-node.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="1" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.86238533" vertical-offset="208" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-region.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="50" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-block.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="50" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-comment.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="880" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/node.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="33" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/garland/garland.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="347" selection-end="382" vertical-scroll-proportion="0.22197558" vertical-offset="0" max-vertical-offset="901" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.52873564" vertical-offset="1800" max-vertical-offset="2720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="20" selection-start="271" selection-end="271" vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="200" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="44" selection-start="123" selection-end="123" vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="240" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="770" selection-end="770" vertical-scroll-proportion="-2.7586207" vertical-offset="220" max-vertical-offset="1180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-page.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="6" selection-start="625" selection-end="625" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="800" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/field/field.attach.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1393" column="9" selection-start="55518" selection-end="55518" vertical-scroll-proportion="0.36666667" vertical-offset="27481" max-vertical-offset="28380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node/content_types.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="23" selection-start="1107" selection-end="1113" vertical-scroll-proportion="0.33293268" vertical-offset="383" max-vertical-offset="9120" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node/content_types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node/node.pages.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/system/system.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2860" column="25" selection-start="101442" selection-end="101442" vertical-scroll-proportion="-3.9655173" vertical-offset="57025" max-vertical-offset="80800">
+        <state line="2860" column="25" selection-start="101442" selection-end="101442" vertical-scroll-proportion="0.0" vertical-offset="57200" max-vertical-offset="80860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/common.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4270" column="14" selection-start="163777" selection-end="163777" vertical-scroll-proportion="0.5659277" vertical-offset="84795" max-vertical-offset="167840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="2" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="6180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="15" selection-start="176" selection-end="176" vertical-scroll-proportion="0.1557286" vertical-offset="0" max-vertical-offset="899" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/blog/blog.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="10" selection-start="59" selection-end="274" vertical-scroll-proportion="0.044493884" vertical-offset="0" max-vertical-offset="899" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node/node.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="19080">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node/node.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="544" column="0" selection-start="18914" selection-end="18914" vertical-scroll-proportion="218.44827" vertical-offset="17135" max-vertical-offset="83880">
           <folding>
-            <marker date="1430961198000" expanded="true" signature="61057:61101" placeholder="SELECT * FRO..." />
-            <marker date="1430961198000" expanded="true" signature="76626:76720" placeholder="SELECT mlid,..." />
-            <marker date="1430961198000" expanded="true" signature="80203:80295" placeholder="SELECT filen..." />
-            <marker date="1430961198000" expanded="true" signature="80874:80915" placeholder="SELECT * FRO..." />
-            <marker date="1430961198000" expanded="true" signature="107675:107759" placeholder="SELECT fid F..." />
-            <marker date="1430961198000" expanded="true" signature="127774:127864" placeholder="SELECT df.df..." />
-            <marker date="1430961198000" expanded="true" signature="129275:129330" placeholder="SELECT forma..." />
-            <marker date="1430961198000" expanded="true" signature="131195:131280" placeholder="SELECT dft.t..." />
-            <marker date="1430961198000" expanded="true" signature="134393:134587" placeholder="SELECT df.df..." />
-            <marker date="1430961198000" expanded="true" signature="138631:138709" placeholder="SELECT 1 FRO..." />
+            <marker date="1430961198000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
+            <marker date="1430961198000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
+            <marker date="1430961198000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
+            <marker date="1430961198000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
+            <marker date="1430961198000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
+            <marker date="1430961198000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
+            <marker date="1430961198000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
+            <marker date="1430961198000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
+            <marker date="1430961198000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
+            <marker date="1430961198000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
+            <marker date="1430961198000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
+            <marker date="1430961198000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
+            <marker date="1430961198000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
+            <marker date="1430961198000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
+            <marker date="1430961198000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
+            <marker date="1430961198000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
+            <marker date="1430961198000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
+            <marker date="1430961198000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
+            <marker date="1430961198000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
+            <marker date="1430961198000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
+            <marker date="1430961198000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
+            <marker date="1430961198000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="39" selection-start="522" selection-end="522" vertical-scroll-proportion="-10.4" vertical-offset="0" max-vertical-offset="800">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node/node.tokens.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8374558" vertical-offset="711" max-vertical-offset="4260">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="38" selection-start="3575" selection-end="3575" vertical-scroll-proportion="0.40229884" vertical-offset="1670" max-vertical-offset="5320">
+        <state line="69" column="39" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.5356322" vertical-offset="914" max-vertical-offset="5960">
           <folding />
         </state>
       </provider>

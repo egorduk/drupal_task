@@ -63,7 +63,12 @@ function products_menu() {
     return $items;
 }
 
-function products_form($form, &$form_state, $product = null) {
+function products_form($form, &$form_state, $product = null, $typeProduct = null) {
+    $query = db_select('type_product', 'tp')
+        ->fields('tp', array('id', 'name'));
+    $options = $query->execute()->fetchAllKeyed();
+    $options = _get_type_product_items();
+
     $form['name'] = array(
         '#title'         => t('Product name'),
         '#description'   => t(''),
@@ -71,11 +76,26 @@ function products_form($form, &$form_state, $product = null) {
         '#default_value' => $product ? $product['name'] : '',
         '#required'      => true,
     );
-    $form['url'] = array(
-        '#title'         => t('Product url'),
+    $form['info'] = array(
+        '#title'         => t('Product info'),
         '#description'   => t(''),
-        '#type'          => 'textfield',
-        '#default_value' => $product ? $product['url'] : '',
+        '#type'          => 'textarea',
+        '#default_value' => $product ? $product['info'] : '',
+        '#required'      => true
+    );
+    $form['img'] = array(
+        '#title'         => t('Product image'),
+        '#description'   => t(''),
+        '#type'          => 'file',
+        '#default_value' => $product ? $product['img'] : '',
+        '#required'      => true
+    );
+    $form['type_product'] = array(
+        '#title'         => t('Type product'),
+        '#type'          => 'select',
+        '#description'   => t(''),
+        '#default_value' => $typeProduct ? $typeProduct['name'] : t('Select type product'),
+        '#options'       => $options,
         '#required'      => true
     );
     $form['submit'] = array(
@@ -122,39 +142,50 @@ function products_form_validate($form, &$form_state) {
 function products_form_submit($form, &$form_state) {
     $product = array(
         'name'       => $form_state['values']['name'],
-        'url'        => $form_state['values']['url'],
+        'info'        => $form_state['values']['info'],
+        'img'        => $form_state['values']['img'],
         'created_at' => time(),
         'updated_at' => time(),
     );
     // save edit data
     if (isset($form_state['values']['id'])) {
         $product['id'] = $form_state['values']['id'];
-        drupal_write_record('products', $product, 'id');
+        drupal_write_record('product', $product, 'id');
         drupal_set_message(t('Product edited!'));
     } // add new data
     else {
-        drupal_write_record('products', $product);
+        drupal_write_record('product', $product);
         drupal_set_message(t('Product added!'));
     }
     drupal_goto('admin/config/content/products');
 }
 
 function product_load($id) {
-    $product = db_select('products', 'n')
-        ->fields('n', array('id', 'name', 'url', 'created_at', 'updated_at'))
-        ->condition('n.id', $id)
+    $product = db_select('product', 'p')
+        ->fields('p', array('id', 'name', 'image', 'info', 'created_at', 'updated_at', 'type_id'))
+        //->innerJoin('type_product', 'tp', 'tp.id = p.type_id')
+        ->condition('p.id', $id)
         ->execute()->fetchAssoc();
     return $product;
+}
+
+function type_product_load($id) {
+    $typeProduct = db_select('type_product', 'tp')
+        ->fields('tp', array('id', 'name'))
+        ->condition('tp.id', $id)
+        ->execute()->fetchAssoc();
+    return $typeProduct;
 }
 
 function products_list() {
     $header = array(
         array('data' => t('Name')),
-        array('data' => t('URL')),
+        array('data' => t('Info')),
+        array('data' => t('Image')),
         array('data' => t('Actions'))
     );
-    $products = db_select('products', 'n')
-        ->fields('n', array('id', 'name', 'url'))
+    $products = db_select('product', 'n')
+        ->fields('n', array('id', 'name', 'info', 'img'))
         ->execute()->fetchAll();
     $row = array();
     if ($products) {
@@ -165,7 +196,8 @@ function products_list() {
             );
             $row [] = array(
                 array('data' => $product->name),
-                array('data' => $product->url),
+                array('data' => $product->describe),
+                array('data' => $product->image),
                 array('data' => implode(' | ', $actions))
             );
         }
@@ -177,13 +209,13 @@ function products_list() {
 }
 
 function product_delete($product) {
-    db_delete('products')
+    db_delete('product')
         ->condition('id', $product['id'])
         ->execute();
 }
 
 function products_contents($display) {
-    $query = db_select('products', 'n')
+    $query = db_select('product', 'n')
         ->fields('n', array('id', 'name', 'url'))
         ->orderBy('name', 'DESC');
     if ($display == 'block') {
@@ -196,7 +228,7 @@ function products_block_view($delta = '') {
     $blocks = array();
     switch ($delta) {
         case 'products':
-            $select = db_select('products', 'tc');
+            $select = db_select('product', 'tc');
             $select->addField('tc', 'name');
             $select->addField('tc', 'url');
             $entries = $select->execute()->fetchAll();

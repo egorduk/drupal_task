@@ -5,7 +5,7 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	background: #DEDEDE url(images/img01.png) repeat;
+	background: #DEDEDE url('') repeat;
 	font-family: 'Abel', sans-serif;
 	font-size: 15px;
 	color: #8F8F8F;
@@ -83,7 +83,7 @@ hr {
 	overflow: hidden;
 	height: auto;
 	margin-bottom: 30px;
-	background: url(images/img01.png) repeat;
+	background: url('') repeat;
 	border-bottom: 1px solid #DAD8D8;
 }
 
@@ -178,6 +178,10 @@ hr {
 	padding: 0px 0px 10px 0px;
 	border-bottom: 1px solid #DEDEDE;
 	color: #303030;
+}
+
+#content table {
+    width: 100%;
 }
 
 /** SIDEBAR */
