@@ -64,9 +64,6 @@ function products_menu() {
 }
 
 function products_form($form, &$form_state, $product = null, $typeProduct = null) {
-    $query = db_select('type_product', 'tp')
-        ->fields('tp', array('id', 'name'));
-    $options = $query->execute()->fetchAllKeyed();
     $options = _get_type_product_items();
 
     $form['name'] = array(
@@ -88,13 +85,13 @@ function products_form($form, &$form_state, $product = null, $typeProduct = null
         '#description'   => t(''),
         '#type'          => 'file',
         '#default_value' => $product ? $product['img'] : '',
-        '#required'      => true
+        '#required'      => false
     );
-    $form['type_product'] = array(
+    $form['type_product_id'] = array(
         '#title'         => t('Type product'),
         '#type'          => 'select',
         '#description'   => t(''),
-        '#default_value' => $typeProduct ? $typeProduct['name'] : t('Select type product'),
+        '#default_value' => $typeProduct ? $product['type_id'] : t('Select type product'),
         '#options'       => $options,
         '#required'      => true
     );
@@ -137,13 +134,32 @@ function products_form_validate($form, &$form_state) {
     } else {
         form_set_error('url', t('URL is invalid!'));
     }*/
+    $file = file_save_upload('img', array(
+        'file_validate_is_image' => array(),
+        'file_validate_extensions' => array('png gif jpg jpeg'),
+        'file_destination' => array('temp/'),
+    ));
+    if ($file) {
+        if ($file = file_move($file, 'public/')) {
+            $form_state['storage']['file'] = $file;
+        } else {
+            form_set_error('file', t("Failed to write the uploaded file to the file folder!"));
+        }
+    } else {
+        form_set_error('file', t('No file was uploaded!'));
+    }
 }
 
 function products_form_submit($form, &$form_state) {
+    $file = $form_state['storage']['file'];
+    unset($form_state['storage']['file']);
+    $file->status = FILE_STATUS_PERMANENT;
+    file_save($file);
     $product = array(
         'name'       => $form_state['values']['name'],
-        'info'        => $form_state['values']['info'],
+        'info'       => $form_state['values']['info'],
         'img'        => $form_state['values']['img'],
+        'type_id'    => $form_state['values']['type_product_id'],
         'created_at' => time(),
         'updated_at' => time(),
     );
@@ -196,8 +212,8 @@ function products_list() {
             );
             $row [] = array(
                 array('data' => $product->name),
-                array('data' => $product->describe),
-                array('data' => $product->image),
+                array('data' => $product->info),
+                array('data' => $product->img),
                 array('data' => implode(' | ', $actions))
             );
         }
@@ -290,4 +306,10 @@ function products_theme() {
             'template'  => 'products-content'
         )
     );
+}
+
+function _get_type_product_items() {
+    $query = db_select('type_product', 'tp')
+        ->fields('tp', array('id', 'name'));
+    return $query->execute()->fetchAllKeyed();
 }
