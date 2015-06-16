@@ -17,17 +17,19 @@ function products_schema() {
         'fields'      => array(
             'id'         => array('type' => 'serial',  'size' => 'normal',  'not null' => TRUE),
             'name'       => array('type' => 'varchar', 'length' => 50, 'not null' => TRUE),
-            'img'   => array('type' => 'varchar', 'length' => 50, 'not null' => TRUE),
-            'info'        => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE),
+            'info'       => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE),
             'created_at' => array('type' => 'int', 'not null' => TRUE),
             'updated_at' => array('type' => 'int', 'not null' => TRUE),
-            'type_id'        => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0)
+            'image_id'   => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+            'type_id'    => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0)
         ),
         'primary key' => array('id'),
            'foreign keys' => array(
               'affected_node' => array(
                 'table' => 'type_product',
                 'columns' => array('type_id' => 'id'),
+                'table' => 'file_managed',
+                'columns' => array('image_id' => 'fid')
               ),
              )
     );
