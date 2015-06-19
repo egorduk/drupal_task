@@ -10,8 +10,8 @@ Type:
 $image = variable_get('file_public_path', conf_path() . '/files') . '/' . file_uri_target($product['uri']); ?>
 <img style="height: 100px" src="../../../../../<?php echo $image; ?>"><br><br>
 Created:
-<?php echo $product['created_at']; ?><br><br>
+<?php echo format_date($product['created_at'], 'medium', 'd/m/Y H:i'); ?><br><br>
 Updated:
-<?php echo $product['updated_at']; ?><br><br>
+<?php echo format_date($product['updated_at'], 'medium', 'd/m/Y H:i'); ?><br><br>
 <hr>
 <br><br>

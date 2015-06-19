@@ -26,44 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="products.module" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="products.module" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="63" selection-start="8108" selection-end="8117" vertical-scroll-proportion="-7.6666665" vertical-offset="4066" max-vertical-offset="7240">
-              <folding>
-                <marker date="1434476495958" expanded="true" signature="8172:8185" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products-content.tpl.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="8" selection-start="493" selection-end="493" vertical-scroll-proportion="0.37691402" vertical-offset="0" max-vertical-offset="849">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.install" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="37" selection-start="1296" selection-end="1296" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="840">
+            <state line="245" column="21" selection-start="8985" selection-end="8985" vertical-scroll-proportion="0.5862069" vertical-offset="4390" max-vertical-offset="10020">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="shortcut.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/shortcut/shortcut.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="15400">
+              <folding>
+                <marker date="1434555524000" expanded="true" signature="19934:19969" placeholder="SELECT COUNT..." />
+                <marker date="1434555524000" expanded="true" signature="21313:21362" placeholder="SELECT 1 FRO..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="node.install" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/node/node.install">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="19080">
+            <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="-22.4" vertical-offset="3120" max-vertical-offset="19080">
               <folding />
             </state>
           </provider>
@@ -95,28 +82,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="544" column="0" selection-start="18914" selection-end="18914" vertical-scroll-proportion="0.0" vertical-offset="10880" max-vertical-offset="83960">
               <folding>
-                <marker date="1430961198000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
-                <marker date="1430961198000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
-                <marker date="1430961198000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
-                <marker date="1430961198000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
-                <marker date="1430961198000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
-                <marker date="1430961198000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
-                <marker date="1430961198000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
-                <marker date="1430961198000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
-                <marker date="1430961198000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
-                <marker date="1430961198000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
-                <marker date="1430961198000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
-                <marker date="1430961198000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
-                <marker date="1430961198000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
-                <marker date="1430961198000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
-                <marker date="1430961198000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
-                <marker date="1430961198000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
-                <marker date="1430961198000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
-                <marker date="1430961198000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
-                <marker date="1430961198000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
-                <marker date="1430961198000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
-                <marker date="1430961198000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
-                <marker date="1430961198000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
+                <marker date="1434555524000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
+                <marker date="1434555524000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
+                <marker date="1434555524000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
+                <marker date="1434555524000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
+                <marker date="1434555524000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
+                <marker date="1434555524000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
+                <marker date="1434555524000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
+                <marker date="1434555524000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
+                <marker date="1434555524000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
+                <marker date="1434555524000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
+                <marker date="1434555524000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
+                <marker date="1434555524000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
+                <marker date="1434555524000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
+                <marker date="1434555524000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
+                <marker date="1434555524000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
+                <marker date="1434555524000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
+                <marker date="1434555524000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
+                <marker date="1434555524000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
+                <marker date="1434555524000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
+                <marker date="1434555524000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
+                <marker date="1434555524000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
+                <marker date="1434555524000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
               </folding>
             </state>
           </provider>
@@ -182,9 +169,9 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/style.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/script.js" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.install" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php" />
       </list>
     </option>
   </component>
@@ -504,6 +491,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="shortcut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal_task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal_task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="node" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -517,7 +522,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../stansberry" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -557,7 +562,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -566,7 +571,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14323749" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16134185" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1629393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -600,15 +605,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="47" selection-start="5332" selection-end="5332" vertical-scroll-proportion="0.0" vertical-offset="2650" max-vertical-offset="5360">
-          <folding>
-            <marker date="1434476495958" expanded="true" signature="8172:8185" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="17" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="800">
@@ -647,28 +643,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2113" column="30" selection-start="69336" selection-end="69336" vertical-scroll-proportion="0.0" vertical-offset="42260" max-vertical-offset="83960">
           <folding>
-            <marker date="1430961198000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
-            <marker date="1430961198000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
-            <marker date="1430961198000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
-            <marker date="1430961198000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
-            <marker date="1430961198000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
-            <marker date="1430961198000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
-            <marker date="1430961198000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
-            <marker date="1430961198000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
-            <marker date="1430961198000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
-            <marker date="1430961198000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
-            <marker date="1430961198000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
-            <marker date="1430961198000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
-            <marker date="1430961198000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
-            <marker date="1430961198000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
-            <marker date="1430961198000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
-            <marker date="1430961198000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
-            <marker date="1430961198000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
+            <marker date="1434555524000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
+            <marker date="1434555524000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
+            <marker date="1434555524000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
+            <marker date="1434555524000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
+            <marker date="1434555524000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
+            <marker date="1434555524000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
+            <marker date="1434555524000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
+            <marker date="1434555524000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
+            <marker date="1434555524000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
+            <marker date="1434555524000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
+            <marker date="1434555524000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
+            <marker date="1434555524000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
+            <marker date="1434555524000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
           </folding>
         </state>
       </provider>
@@ -881,42 +877,32 @@
         <state line="2" column="10" selection-start="59" selection-end="274" vertical-scroll-proportion="0.044493884" vertical-offset="0" max-vertical-offset="899" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/node.install">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="19080">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/node/node.module">
       <provider selected="true" editor-type-id="text-editor">
         <state line="544" column="0" selection-start="18914" selection-end="18914" vertical-scroll-proportion="0.0" vertical-offset="10880" max-vertical-offset="83960">
           <folding>
-            <marker date="1430961198000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
-            <marker date="1430961198000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
-            <marker date="1430961198000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
-            <marker date="1430961198000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
-            <marker date="1430961198000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
-            <marker date="1430961198000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
-            <marker date="1430961198000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
-            <marker date="1430961198000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
-            <marker date="1430961198000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
-            <marker date="1430961198000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
-            <marker date="1430961198000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
-            <marker date="1430961198000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
-            <marker date="1430961198000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
-            <marker date="1430961198000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
-            <marker date="1430961198000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
-            <marker date="1430961198000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
-            <marker date="1430961198000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
-            <marker date="1430961198000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
+            <marker date="1434555524000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
+            <marker date="1434555524000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
+            <marker date="1434555524000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
+            <marker date="1434555524000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
+            <marker date="1434555524000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
+            <marker date="1434555524000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
+            <marker date="1434555524000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
+            <marker date="1434555524000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
+            <marker date="1434555524000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
+            <marker date="1434555524000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
+            <marker date="1434555524000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
+            <marker date="1434555524000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
+            <marker date="1434555524000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
           </folding>
         </state>
       </provider>
@@ -933,9 +919,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="37" selection-start="1296" selection-end="1296" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="840">
+        <state line="16" column="8" selection-start="565" selection-end="565" vertical-scroll-proportion="0.37691402" vertical-offset="0" max-vertical-offset="849">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node/node.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="-22.4" vertical-offset="3120" max-vertical-offset="19080">
           <folding />
         </state>
       </provider>
@@ -943,21 +936,30 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="63" selection-start="8108" selection-end="8117" vertical-scroll-proportion="-7.6666665" vertical-offset="4066" max-vertical-offset="7240">
+        <state line="36" column="1" selection-start="1630" selection-end="1630" vertical-scroll-proportion="0.84407973" vertical-offset="0" max-vertical-offset="853">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shortcut/shortcut.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="15400">
           <folding>
-            <marker date="1434476495958" expanded="true" signature="8172:8185" placeholder="..." />
+            <marker date="1434555524000" expanded="true" signature="19934:19969" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="21313:21362" placeholder="SELECT 1 FRO..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php">
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="493" selection-end="493" vertical-scroll-proportion="0.37691402" vertical-offset="0" max-vertical-offset="849">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="245" column="21" selection-start="8985" selection-end="8985" vertical-scroll-proportion="0.5862069" vertical-offset="4390" max-vertical-offset="10020">
+          <folding />
         </state>
       </provider>
     </entry>
