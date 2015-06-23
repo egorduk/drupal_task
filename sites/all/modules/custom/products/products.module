@@ -1,496 +1,275 @@
 <?php
 
-function products_block_info() {
-    $blocks['products'] = array(
-        'info'  => t('Products'),
-        'cache' => DRUPAL_CACHE_PER_ROLE
-    );
-    return $blocks;
-}
+define('PRODUCT_PATH', 'product');
 
-function products_menu() {
-    $items = array();
-    $items['admin/config/content/products'] = array(
-        'title'            => 'Products',
-        'description'      => 'Configure',
-        'page callback'    => 'products_list',
-        'access arguments' => array('administer site configuration'),
-    );
-/*    $items['admin/config/content/products/list'] = array(
-        'title'  => 'Products list',
-        'type'   => MENU_DEFAULT_LOCAL_TASK,
-        'weight' => 1,
-    );*/
-    // add form
-    $items['admin/config/content/product/add'] = array(
-        'title'            => 'Add product',
-        'page callback'    => 'drupal_get_form',
-        'page arguments'   => array('products_form'),
-        'access arguments' => array('administer site configuration'),
-        'type'             => MENU_LOCAL_TASK,
-        'weight'           => 2,
-    );
-    // edit form
-    $items['admin/config/content/product/%product/edit'] = array(
-        'title'            => 'Edit products',
-        'page callback'    => 'drupal_get_form',
-        'page arguments'   => array('products_form', 4),
-        'access arguments' => array('administer site configuration'),
-        'type'             => MENU_CALLBACK,
-    );
-    // delete
-    $items['admin/config/content/product/%product/delete'] = array(
-        'title'            => 'Delete product',
-        //'page callback'    => 'product_delete',
-        'page arguments'   => array('product_delete_form', 4),
-        'page callback' => 'drupal_get_form',
-        'access arguments' => array('administer site configuration'),
-        'type'             => MENU_CALLBACK,
-    );
-    // view
-    $items['admin/config/content/product/%product/view'] = array(
-        'title'            => 'View product',
-        'page arguments'   => 4,
-        'page callback'    => 'product_view',
-        'access arguments' => array('administer site configuration'),
-        'type'             => MENU_CALLBACK,
-    );
-    $items['products'] = array(
-        'title'            => 'Products',
-        'page callback'    => '_products_page',
-        'access arguments' => array('access content'),
-    );
-    $items['product/%product'] = array(
-        'title'            => 'Current product',
-        'page callback'    => 'product_content',
-        'page arguments'   => array(1),
-        'access callback'  => TRUE,
-        'access arguments' => array('access content'),
-        'type'             => MENU_CALLBACK,
-    );
-    $items['admin/config/content/type_products'] = array(
-        'title'            => 'Type products',
-        'description'      => 'Configure',
-        'page callback'    => 'type_products_list',
-        'access arguments' => array('administer site configuration'),
-    );
-    // view
-    $items['admin/config/content/type_product/add'] = array(
-        'title'            => 'Add type product',
-        'page callback'    => 'drupal_get_form',
-        'page arguments'   => array('type_product_form'),
-        'access arguments' => array('administer site configuration'),
-        'type'             => MENU_LOCAL_TASK,
-        'weight'           => 2,
-    );
-    // edit form
-    $items['admin/config/content/type_product/%type_product/edit'] = array(
-        'title'            => 'Edit type products',
-        'page callback'    => 'drupal_get_form',
-        'page arguments'   => array('type_product_form', 4),
-        'access arguments' => array('administer site configuration'),
-        'type'             => MENU_CALLBACK,
-    );
-    // delete
-    $items['admin/config/content/type_product/%type_product/delete'] = array(
-        'title'            => 'Delete type product',
-        'page arguments'   => array('type_product_delete_form', 4),
-        'page callback' => 'drupal_get_form',
-        'access arguments' => array('administer site configuration'),
-        'type'             => MENU_CALLBACK,
-    );
-    return $items;
-}
-
-function products_form($form, &$form_state, $product = null, $typeProduct = null) {
-    $options = _get_type_product_items('selector');
-    $form['name'] = array(
-        '#title'         => t('Product name'),
-        '#description'   => t(''),
-        '#type'          => 'textfield',
-        '#default_value' => $product ? $product['name'] : '',
-        '#required'      => true,
-    );
-    $form['info'] = array(
-        '#title'         => t('Product info'),
-        '#description'   => t(''),
-        '#type'          => 'textarea',
-        '#default_value' => $product ? $product['info'] : '',
-        '#required'      => true
-    );
-    $form['img'] = array(
-        '#title'         => t('Product image'),
-        '#description'   => t(''),
-        '#type'          => 'file',
-        '#default_value' => $product ? $product['img'] : '',
-        '#required'      => false
-    );
-    $form['type_product_id'] = array(
-        '#title'         => t('Type product'),
-        '#type'          => 'select',
-        '#description'   => t(''),
-        '#default_value' => $typeProduct ? $product['type_id'] : t('Select type product'),
-        '#options'       => $options,
-        '#required'      => true
-    );
-    $form['submit'] = array(
-        '#type'  => 'submit',
-        '#value' => $product ? t('Save') : t('Add')
-    );
-    if ($product) {
-        $form['id'] = array(
-            '#type'  => 'value',
-            '#value' => $product['id']
-        );
-    }
-    return $form;
-}
-
-function product_delete_form($form, &$form_state, $product) {
-    $form = confirm_form($form, t("Confirm dialog"), 'admin/config/content/products', t("Delete current record?"), t("Yes"), t("No"));
-    $form_state['product'] = $product;
-    return $form;
-}
-
-function product_delete_form_submit($form, &$form_state) {
-    if (isset($form_state['product'])) {
-        $form_state['rebuild'] = TRUE;
-        product_delete($form_state['product']);
-        drupal_set_message(t('Record deleted!'));
-        drupal_goto('admin/config/content/products');
-    }
-}
-
-function products_form_validate($form, &$form_state) {
-    /*$url = $form_state['values']['url'];
-    if (fopen($url, "r")) {
-        libxml_use_internal_errors(true);
-        $product = simplexml_load_file($url);
-        if (empty($product)) {
-            form_set_error('url', t('URL is invalid!'));
-        }
-    } else {
-        form_set_error('url', t('URL is invalid!'));
-    }*/
-    $file = file_save_upload('img', array(
-        'file_validate_is_image' => array(),
-        'file_validate_extensions' => array('png gif jpg jpeg')
-    ), "public://");
-    if ($file) {
-        if ($file = file_move($file, 'public://')) {
-            $form_state['storage']['file'] = $file;
-        } else {
-            form_set_error('file', t("Failed to write the uploaded file to the file folder!"));
-        }
-    } else {
-        form_set_error('file', t('No file was uploaded!'));
-    }
-}
-
-function products_form_submit($form, &$form_state) {
-    $file = $form_state['storage']['file'];
-    unset($form_state['storage']['file']);
-    $file->status = FILE_STATUS_PERMANENT;
-    file_save($file);
-    //dpm($file);
-    $product = array(
-        'name'       => $form_state['values']['name'],
-        'info'       => $form_state['values']['info'],
-        'image_id'   => $file->fid,
-        'type_id'    => $form_state['values']['type_product_id'],
-        'created_at' => time(),
-        'updated_at' => time(),
-    );
-    // save edit data
-    if (isset($form_state['values']['id'])) {
-        $product['id'] = $form_state['values']['id'];
-        drupal_write_record('product', $product, 'id');
-        drupal_set_message(t('Product edited!'));
-    } // add new data
-    else {
-        drupal_write_record('product', $product);
-        drupal_set_message(t('Product added!'));
-    }
-    drupal_goto('admin/config/content/products');
-}
-
-function product_load($id) {
-    $query = db_select('product', 'p');
-    $query->innerJoin('file_managed', 'fm', 'fm.fid = p.image_id');
-    $query->innerJoin('type_product', 'tp', 'tp.id = p.type_id');
-    $query->fields('p', array('id', 'name', 'image_id', 'info', 'created_at', 'updated_at', 'type_id'));
-    $query->fields('fm', array('fid', 'uri'));
-    $query->fields('tp', array('name'));
-    $query->condition('p.id', $id);
-    return $query->execute()->fetchAssoc();
-}
-
-function type_product_load($id) {
-    $typeProduct = db_select('type_product', 'tp')
-        ->fields('tp', array('id', 'name'))
-        ->condition('tp.id', $id)
-        ->execute()->fetchAssoc();
-    return $typeProduct;
-}
-
-function products_list() {
-    $shortcut_set = new stdClass();
-    $shortcut_set->title = 'Dummy Shortcut Set';
-    $shortcut_set->set_name = 'dummy-set';
-    $shortcut_set->links = array(
-        array(
-            'link_path' => 'admin',
-            'link_title' => 'Admin',
-        ),
-    );
-    dpm($shortcut_set);
-    dpm(shortcut_set_save($shortcut_set));
-    $header = array(
-        array('data' => t('Name')),
-        array('data' => t('Info')),
-        array('data' => t('Image')),
-        array('data' => t('Type product')),
-        array('data' => t('Actions'))
-    );
-    $products = _get_product_items();
-    $row = array();
-    if ($products) {
-        foreach ($products as $product) {
-            $actions = array(
-                l(t('view'), 'admin/config/content/product/' . $product->id . '/view'),
-                l(t('edit'), 'admin/config/content/product/' . $product->id . '/edit'),
-                l(t('delete'), 'admin/config/content/product/' . $product->id . '/delete')
-            );
-            $image = variable_get('file_public_path', conf_path() . '/files') . '/' . file_uri_target($product->uri);
-            $image = '<img style="height: 100px" src="../../../' . $image . '">';
-            $row [] = array(
-                array('data' => $product->name),
-                array('data' => $product->info),
-                array('data' => $image),
-                array('data' => $product->tp_name),
-                array('data' => implode(' | ', $actions))
-            );
-        }
-    }
-    return theme('table', array(
-        'header' => $header,
-        'rows'   => $row,
-    ));
-}
-
-function product_delete($product) {
-    db_delete('product')
-        ->condition('id', $product['id'])
-        ->execute();
-}
-
-function products_contents($display) {
-    $query = db_select('product', 'n')
-        ->fields('n', array('id', 'name', 'url'))
-        ->orderBy('name', 'DESC');
-    if ($display == 'block') {
-        $query->range(0, 5);
-    }
-    return $query->execute();
-}
-
-function products_block_view($delta = '') {
-    $blocks = array();
-    switch ($delta) {
-        case 'products':
-            $select = db_select('product', 'tc');
-            $select->addField('tc', 'name');
-            $select->addField('tc', 'url');
-            $entries = $select->execute()->fetchAll();
-            $blocks['subject'] = t('List of products');
-            $blocks['content'] = theme('products_block', array('urls' => $entries));
-    }
-    return $blocks;
-}
-
-function _products_page() {
-    drupal_set_title(t('Products'));
-    $result = products_contents('page')->fetchAll();
-    if (!$result) {
-        $page_array['products_arguments'] = array(
-            '#title'  => t('Products page'),
-            '#markup' => t('No products available'),
-        );
-        return $page_array;
-    } else {
-        $page_array = theme('products_page', array('urls' => $result));
-        return $page_array;
-    }
-}
-
-function product_view($product) {
-    if (!empty($product)) {
-        drupal_set_title($product['name']);
-        $page_array = theme('products_content', array('product' => $product));
-    } else {
-        $page_array['products_arguments'] = array(
-            '#title'  => t('All posts'),
-            '#markup' => t('No posts available.'),
-        );
-    }
-    return $page_array;
-}
-
-function product_content($product) {
-    $url = $product['url'];
-    libxml_use_internal_errors(true);
-    $p = simplexml_load_file($url);
-    if (!empty($p)) {
-        drupal_set_title($p->channel->title);
-        $page_array = theme('products_content', array('items' => $p));
-    } else {
-        $page_array['products_arguments'] = array(
-            '#title'  => t('All posts'),
-            '#markup' => t('No posts available.'),
-        );
-    }
-    return $page_array;
-}
-
-function products_theme() {
+function product_entity_info() {
     return array(
-        'products_block'   => array(
-            'variables' => array(
-                'urls' => NULL
+        'product' => array(
+            'label' => t('Product'),
+            /*'entity class' => 'Product',
+            'controller class' => 'ProductController',*/
+            'entity class' => 'Entity', // Класс сущности.
+            'controller class' => 'EntityAPIController',
+            'uri callback' => 'product_uri',
+            'base table' => 'product',
+            'fieldable' => TRUE,
+            // Чтобы иметь интеграцию с Views из коробки мы должны указать этот ключ
+            // и наш модуль не должен  иметь реализованный
+            // hook_views_data() в виде smessage_views_data().
+            'module' => 'products',
+            // Единственный ключ, который у нас есть и который нам нужен.
+            'entity keys' => array(
+                'id' => 'id',
+                'label' => 'name'
             ),
-            'template'  => 'products-block'
-        ),
-        'products_page'    => array(
-            'variables' => array(
-                'urls' => NULL
+            'bundles' => array(
+                // Ключ 'product' - машинное название типа.
+                'product' => array(
+                    'label' => t('Product'), // Человеко-понятное название типа.
+                    'admin' => array(
+                        'path' => 'admin/config/content/products', // Путь, по которому доступна админка.
+                        //'access arguments' => array('configure products settings'), // Права доступа в админку.
+                    ),
+                ),
             ),
-            'template'  => 'products-page'
-        ),
-        'products_content' => array(
-            'variables' => array(
-                'items' => NULL
+            // Чтобы код почти прямым путём пришёл к SMessage::defaultLabel().
+            //'label callback' => 'entity_class_label',
+            // Чтобы код почти прямым путём пришёл к SMessage::defaultUri().
+            //'uri callback' => 'entity_class_uri',
+            // Здесь мы будем проверять доступ текущего пользователя ко всем
+            // возможным операциям с сообщениями, от создания до просмотра.
+            // 'access callback' => 'product_access',
+            //'access arguments' => array('administer site configuration'),
+            //'access callback'  => TRUE,
+            // У нас нет типов и настраиваемых полей.
+            //'bundles' => array(),
+          /*  'admin ui' => array(
+                // Лучше явно указать заменитель, это может быть полезным во
+                // многих случаях.
+                //'menu wildcard' => '%product',
+                // В нашей реализации SMessageContentUIController->hook_menu()
+                // мы легко получим этот путь и будем лепить к нему нужные адреса.
+                'path' => 'admin/config/content/products',
+                //'controller class' => 'ProductContentUIController',
+            ),*/
+            // Для простой сущности, не имеющей настраиваемых полей, режимы просмотра
+            // определять совсем необязательно - всё равно мы их нигде не увидим,
+            // кроме как в коде.
+            // Однако мы всё-таки разделяем режимы отображения и от этого разделения
+            // зависит вывод, поэтому их указание здесь будет хорошей документацией.
+            'view modes' => array(
+                'full' => array(
+                    'label' => t('Full'),
+                    'custom settings' => TRUE,
+                ),
+                'admin' => array(
+                    'label' => t('Admin'),
+                    'custom settings' => TRUE,
+                ),
             ),
-            'template'  => 'products-content'
         )
     );
 }
 
-function type_products_list() {
-    $header = array(
-        array('data' => t('Id')),
-        array('data' => t('Name')),
-        array('data' => t('Actions'))
+function product_uri($product) {
+    return array(
+        'path' => 'product/' . $product->id,
     );
-    $typeProducts = _get_type_product_items();
-    $row = array();
-    if ($typeProducts) {
-        foreach ($typeProducts as $typeProduct) {
-            $actions = array(
-                l(t('edit'), 'admin/config/content/type_product/' . $typeProduct->id . '/edit'),
-                l(t('delete'), 'admin/config/content/type_product/' . $typeProduct->id . '/delete')
-            );
-            $row [] = array(
-                array('data' => $typeProduct->id),
-                array('data' => $typeProduct->name),
-                array('data' => implode(' | ', $actions))
-            );
+}
+
+function product_load($product_id) {
+    $products = product_load_multiple(array($product_id), array());
+    return $products ? reset($products) : FALSE;
+}
+
+function product_load_multiple($product_ids = array(), $conditions = array(), $reset = FALSE) {
+    return entity_load('product', $product_ids, $conditions, $reset);
+}
+
+function product_entity_load($entities, $type) {
+    // По умолчанию, сущность имеет только uid пользователя, который создал ее,
+    // добавляем этот код, чтобы получить еще и имя пользователя.
+    if ($type == 'product') {
+        foreach ($entities as $entity) {
+            if ($entity->type_id) {
+                /*if ($account = user_load($entity->type_id)) {
+                    $entity->name = $account->name;
+                }*/
+                $entity->type_name = 'type';
+            } else {
+                $entity->type_name = variable_get('anonymous', t('Anonymous'));
+            }
         }
     }
-    return theme('table', array(
-        'header' => $header,
-        'rows'   => $row,
-    ));
 }
 
-function type_product_form($form, &$form_state, $typeProduct = null) {
-    $form['name'] = array(
-        '#title'         => t('Product type name'),
-        '#description'   => t(''),
-        '#type'          => 'textfield',
-        '#default_value' => $typeProduct ? $typeProduct['name'] : '',
-        '#required'      => true,
+function product_delete($product_id) {
+    product_delete_multiple(array($product_id));
+}
+
+function product_delete_multiple($product_ids) {
+    entity_delete_multiple('product', $product_ids);
+}
+
+function product_theme() {
+    return array(
+        'product' => array(
+            'render element' => 'elements',
+            'template' => 'templates/product',
+        ),
     );
-    $form['submit'] = array(
-        '#type'  => 'submit',
-        '#value' => $typeProduct ? t('Save') : t('Add')
+}
+
+function template_preprocess_product(&$variables) {
+    $variables['view_mode'] = $variables['elements']['#view_mode'];
+    $variables['product'] = $variables['elements']['#product'];
+    $product = $variables['product'];
+    $variables['date'] = format_date($product->created);
+    $variables['name'] = theme('username', array('account' => $product));
+    $uri = product_uri($product);
+    $variables['product_url']  = url($uri['path']);
+    $variables['title'] = check_plain($product->title);
+    $variables['page'] = $variables['view_mode'] == 'full';
+    $variables = array_merge((array) $product, $variables);
+    $variables += array('content' => array());
+    foreach (element_children($variables['elements']) as $key) {
+        $variables['content'][$key] = $variables['elements'][$key];
+    }
+    // Делаем поля доступными в качестве переменных для соответствующего языка.
+    field_attach_preprocess('product', $product, $variables['content'], $variables);
+    $variables['submitted'] = t('Submitted by !username on !datetime', array('!username' => $variables['name'], '!datetime' => $variables['date']));
+    $variables['title_attributes_array']['class'][] = 'product-title';
+ /*   if ($variables['status'] == PRODUCT_PENDING) {
+        $variables['classes_array'][] = 'product-pending';
+    }
+    elseif ($variables['status'] == PRODUCT_COMPLETED) {
+        $variables['classes_array'][] = 'product-completed';
+    }
+    elseif ($variables['status'] == PRODUCT_CANCELED) {
+        $variables['classes_array'][] = 'product-canceled';
+    }*/
+}
+
+function product_view_multiple($products, $view_mode = 'full', $langcode = NULL) {
+    // Подготавливаем данные для отображения.
+    field_attach_prepare_view('product', $products, $view_mode, $langcode);
+    entity_prepare_view('product', $products, $langcode);
+    $build = array();
+    $weight = 0;
+    foreach ($products as $product) {
+        $build['products'][$product->id] = product_view($product, $view_mode, $langcode);
+        $build['products'][$product->id]['#weight'] = $weight++;
+    }
+    $build['products']['#sorted'] = TRUE;
+    return $build;
+}
+
+function product_view($product, $view_mode = 'full', $langcode = NULL) {
+    if (!isset($langcode)) {
+        global $language;
+        $langcode = $language->language;
+    }
+    // Заполняем $product->content данными в виде рендерного массива.
+    product_build_content($product, $view_mode, $langcode);
+    $build = $product->content;
+    // Скрываем данные, чтобы избежать их дублирования при выводе $product->content.
+    unset($product->content);
+    $build += array(
+        '#theme' => 'product',
+        '#product' => $product,
+        '#view_mode' => $view_mode,
+        '#language' => $langcode,
     );
-    if ($typeProduct) {
-        $form['id'] = array(
-            '#type'  => 'value',
-            '#value' => $typeProduct['id']
-        );
+    return $build;
+}
+
+function product_build_content($product, $view_mode = 'full', $langcode = NULL) {
+    if (!isset($langcode)) {
+        global $language;
+        $langcode = $language->language;
     }
-    return $form;
-}
-
-function type_product_form_validate($form, &$form_state) {
-
-}
-
-function type_product_form_submit($form, &$form_state) {
-    $typeProduct = array(
-        'name'       => $form_state['values']['name']
+    // Удаляем существующий конент, если существует.
+    $product->content = array();
+    field_attach_prepare_view('product', array($product->id => $product), $view_mode, $langcode);
+    entity_prepare_view('product', array($product->id => $product), $langcode);
+    $product->content += field_attach_view('product', $product, $view_mode, $langcode);
+    $product->content += array('#view_mode' => $view_mode);
+    $product->content['links'] = array(
+        '#theme' => 'links__product',
+        '#pre_render' => array('drupal_pre_render_links'),
+        '#attributes' => array('class' => array('links')),
     );
-    // save edit data
-    if (isset($form_state['values']['id'])) {
-        $typeProduct['id'] = $form_state['values']['id'];
-        drupal_write_record('type_product', $typeProduct, 'id');
-        drupal_set_message(t('Type product edited!'));
-    } // add new data
-    else {
-        drupal_write_record('type_product', $typeProduct);
-        drupal_set_message(t('Type product added!'));
-    }
-    drupal_goto('admin/config/content/type_products');
 }
 
-function type_product_delete_form($form, &$form_state, $type_product) {
-    $form = confirm_form($form, t("Confirm dialog"), 'admin/config/content/type_products', t("Delete current record?"), t("Yes"), t("No"));
-    $form_state['type'] = $type_product;
-    return $form;
+function product_menu() {
+    // Top level "Product" container.
+    $items['admin/config/product'] = array(
+        'title' => 'Product',
+        'description' => 'Administration tools.',
+        'page callback' => 'system_admin_menu_block_page',
+        'access arguments' => array('access administration pages'),
+        'file' => 'system.admin.inc',
+        'file path' => drupal_get_path('module', 'system'),
+    );
+    $items['admin/config/product/products'] = array(
+        'title' => 'Products',
+        'description' => 'Configure general product settings, fields, and displays.',
+        'page callback' => 'product_admin_products',
+        'access arguments' => array('administer products'),
+        'type' => MENU_NORMAL_ITEM,
+        'file' => 'product.admin.inc',
+    );
+    $items['admin/config/product/products/list'] = array(
+        'title' => 'Products',
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+        'weight' => -10,
+    );
+    // Страница создания продукта.
+    $items['product/add'] = array(
+        'title' => 'Add product',
+        'page callback' => 'product_page_add',
+        'access callback' => TRUE,
+        //'access callback' => 'product_access',
+        'access arguments' => array('create', 'product'),
+        'file' => 'product.pages.inc',
+    );
+    // Страница просмотра продукта.
+    $items['product/%product'] = array(
+        'title callback' => 'product_page_title',
+        'title arguments' => array(1),
+        'page callback' => 'product_page_view',
+        'page arguments' => array(1),
+        'access callback' => 'product_access',
+        'access arguments' => array('view', 'product', 1),
+        'file' => 'product.pages.inc',
+    );
+    $items['product/%product/view'] = array(
+        'title' => 'View',
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+        'weight' => 0,
+    );
+    // Страница редактирования продукта.
+    $items['product/%product/edit'] = array(
+        'title' => 'Edit',
+        'page callback' => 'product_page_edit',
+        'page arguments' => array(1),
+        'access callback' => 'product_access',
+        'access arguments' => array('update', 'product', 1),
+        'weight' => 1,
+        'type' => MENU_LOCAL_TASK,
+        'file' => 'product.pages.inc',
+    );
+    // Страница удаления продукта.
+    $items['product/%product/delete'] = array(
+        'title' => 'Delete',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('product_delete_confirm', 1),
+        'access callback' => 'product_access',
+        'access arguments' => array('delete', 'product', 1),
+        'file' => 'product.pages.inc',
+    );
+    return $items;
 }
 
-function type_product_delete_form_submit($form, &$form_state) {
-    if (isset($form_state['type'])) {
-        $form_state['rebuild'] = TRUE;
-        type_product_delete($form_state['type']);
-        drupal_set_message(t('Record deleted!'));
-        drupal_goto('admin/config/content/type_products');
-    }
+function product_status_get_title($id = NULL) {
 }
-
-function type_product_delete($type_product) {
-    db_delete('type_product')
-        ->condition('id', $type_product['id'])
-        ->execute();
-}
-
-
-
-function _get_type_product_items($mode = null) {
-    $query = db_select('type_product', 'tp')
-        ->fields('tp', array('id', 'name'));
-    if ($mode == 'selector') {
-        return $query->execute()->fetchAllKeyed();
-    }
-    return $query->execute()->fetchAll();
-}
-
-function _get_product_items() {
-    $query = db_select('product', 'p');
-    $query->innerJoin('file_managed', 'fm', 'fm.fid = p.image_id');
-    $query->innerJoin('type_product', 'tp', 'tp.id = p.type_id');
-    $query->fields('p', array('id', 'name', 'info', 'image_id'));
-    $query->fields('fm', array('fid', 'uri'));
-    $query->fields('tp', array('name'));
-    return $query->execute()->fetchAll();
-}
-
-/*function shortcut_set_load($set_name) {
-    $set = db_select('shortcut_set', 'ss')->fields('ss')->condition('set_name', $set_name)->execute()->fetchObject();
-    if (!$set) {
-        return FALSE;
-    }
-    $set->links = menu_load_links($set_name);
-    return $set;
-}*/

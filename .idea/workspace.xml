@@ -26,31 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="products.module" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
+      <file leaf-file-name="products.info" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/products.info">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="245" column="21" selection-start="8985" selection-end="8985" vertical-scroll-proportion="0.5862069" vertical-offset="4390" max-vertical-offset="10020">
+            <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shortcut.module" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/shortcut/shortcut.module">
+      <file leaf-file-name="products.install" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/products.install">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="15400">
-              <folding>
-                <marker date="1434555524000" expanded="true" signature="19934:19969" placeholder="SELECT COUNT..." />
-                <marker date="1434555524000" expanded="true" signature="21313:21362" placeholder="SELECT 1 FRO..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node.install" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/node/node.install">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="-22.4" vertical-offset="3120" max-vertical-offset="19080">
+            <state line="1" column="15" selection-start="40" selection-end="40" vertical-scroll-proportion="0.022883296" vertical-offset="0" max-vertical-offset="1160">
               <folding />
             </state>
           </provider>
@@ -59,78 +47,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/style.css">
+      <file leaf-file-name="products.module" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/products.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="320">
+            <state line="238" column="19" selection-start="8456" selection-end="8456" vertical-scroll-proportion="-56.206898" vertical-offset="3130" max-vertical-offset="8020">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="system.module" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/system/system.module">
+      <file leaf-file-name="product.pages.inc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/product.pages.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2860" column="25" selection-start="101442" selection-end="101442" vertical-scroll-proportion="0.0" vertical-offset="57200" max-vertical-offset="80860">
+            <state line="227" column="1" selection-start="8058" selection-end="8058" vertical-scroll-proportion="-28.172413" vertical-offset="3723" max-vertical-offset="4660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="node.module" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/node/node.module">
+      <file leaf-file-name="product.admin.inc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/product.admin.inc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="544" column="0" selection-start="18914" selection-end="18914" vertical-scroll-proportion="0.0" vertical-offset="10880" max-vertical-offset="83960">
-              <folding>
-                <marker date="1434555524000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
-                <marker date="1434555524000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
-                <marker date="1434555524000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
-                <marker date="1434555524000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
-                <marker date="1434555524000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
-                <marker date="1434555524000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
-                <marker date="1434555524000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
-                <marker date="1434555524000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
-                <marker date="1434555524000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
-                <marker date="1434555524000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
-                <marker date="1434555524000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
-                <marker date="1434555524000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
-                <marker date="1434555524000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
-                <marker date="1434555524000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
-                <marker date="1434555524000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
-                <marker date="1434555524000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
-                <marker date="1434555524000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
-                <marker date="1434555524000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
-                <marker date="1434555524000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
-                <marker date="1434555524000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
-                <marker date="1434555524000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
-                <marker date="1434555524000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preprocess-header.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="280">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preprocess-footer.inc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="280">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="2" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="6180">
+            <state line="90" column="1" selection-start="3225" selection-end="3225" vertical-scroll-proportion="-62.068966" vertical-offset="0" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
@@ -165,13 +103,29 @@
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-page.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/style.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/script.js" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products-content.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.install" />
+        <option value="$PROJECT_DIR$/modules/shortcut/shortcut.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/includes/Product.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/includes/Product.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/includes/Product.controller.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/includes/Product.ui.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/includes/Product.pages.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/templates/products.tpl" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/includes/product.pages.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/product.admin.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/templates/product.tpl" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/product.pages.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.install" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/test/products.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/test/product.pages.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/test/product.admin.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/test/products.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/test/products.install" />
       </list>
     </option>
   </component>
@@ -272,126 +226,6 @@
               <option name="myItemId" value="all" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasktheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasktheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasktheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="preprocess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasktheme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -441,7 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,6 +294,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal_task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal_task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -495,24 +363,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drupal_task" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -524,15 +374,19 @@
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../stansberry" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="SearchEverywhereHistory" value="" />
+    <property name="SearchEverywhereHistory" value="&lt;?php" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\localhost\drupal_task\sites\all\modules\custom" />
+      <recent name="D:\OpenServer\domains\localhost\drupal_task\sites\all\modules\custom\products" />
+      <recent name="D:\OpenServer\domains\localhost\drupal_task\sites\all\modules\custom\products\includes" />
       <recent name="D:\OpenServer\domains\localhost\drupal_task\sites\all\themes\tasktheme\templates" />
     </key>
   </component>
@@ -567,24 +421,45 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14323749" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1629393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14323749" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16453674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14323749" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16453674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-    </layout>
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -605,136 +480,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="800">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/node.install">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="19080">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/system/system.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2860" column="25" selection-start="101442" selection-end="101442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="80860">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/node.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2113" column="30" selection-start="69336" selection-end="69336" vertical-scroll-proportion="0.0" vertical-offset="42260" max-vertical-offset="83960">
-          <folding>
-            <marker date="1434555524000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
-            <marker date="1434555524000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
-            <marker date="1434555524000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
-            <marker date="1434555524000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
-            <marker date="1434555524000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
-            <marker date="1434555524000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
-            <marker date="1434555524000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
-            <marker date="1434555524000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
-            <marker date="1434555524000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
-            <marker date="1434555524000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
-            <marker date="1434555524000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
-            <marker date="1434555524000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
-            <marker date="1434555524000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
-            <marker date="1434555524000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
-            <marker date="1434555524000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
-            <marker date="1434555524000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
-            <marker date="1434555524000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="2" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="6180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-region.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-block.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-comment.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="2" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="880" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/node.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="10" selection-start="1857" selection-end="1857" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1160" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/block1.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="140" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/tasktheme.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/example.sites.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-node.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="1" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.86238533" vertical-offset="208" max-vertical-offset="1080" />
@@ -780,16 +525,6 @@
         <state line="5" column="21" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="44" selection-start="123" selection-end="123" vertical-scroll-proportion="-2.0689654" vertical-offset="0" max-vertical-offset="240" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/templates/page.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="18" selection-start="770" selection-end="770" vertical-scroll-proportion="-2.7586207" vertical-offset="220" max-vertical-offset="1180" />
@@ -798,13 +533,6 @@
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-page.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="6" selection-start="625" selection-end="625" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="800" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="6" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="280">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-footer.inc">
@@ -862,11 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="15" selection-start="176" selection-end="176" vertical-scroll-proportion="0.1557286" vertical-offset="0" max-vertical-offset="899" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/blog/blog.install">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899" />
@@ -875,36 +598,6 @@
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="10" selection-start="59" selection-end="274" vertical-scroll-proportion="0.044493884" vertical-offset="0" max-vertical-offset="899" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/node.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="544" column="0" selection-start="18914" selection-end="18914" vertical-scroll-proportion="0.0" vertical-offset="10880" max-vertical-offset="83960">
-          <folding>
-            <marker date="1434555524000" expanded="true" signature="12013:12076" placeholder="SELECT times..." />
-            <marker date="1434555524000" expanded="true" signature="18272:18316" placeholder="SELECT 1 FRO..." />
-            <marker date="1434555524000" expanded="true" signature="54014:54041" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="54084:54217" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="59998:60046" placeholder="SELECT vid F..." />
-            <marker date="1434555524000" expanded="true" signature="62900:62955" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="71994:72037" placeholder="SELECT chang..." />
-            <marker date="1434555524000" expanded="true" signature="72344:72558" placeholder="SELECT r.vid..." />
-            <marker date="1434555524000" expanded="true" signature="75207:75267" placeholder="SELECT nid F..." />
-            <marker date="1434555524000" expanded="true" signature="78197:78273" placeholder="SELECT type ..." />
-            <marker date="1434555524000" expanded="true" signature="81018:81067" placeholder="SELECT modul..." />
-            <marker date="1434555524000" expanded="true" signature="90021:90185" placeholder="SELECT n.nid..." />
-            <marker date="1434555524000" expanded="true" signature="120978:121018" placeholder="SELECT nid F..." />
-            <marker date="1434555524000" expanded="true" signature="122411:122449" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="122545:122601" placeholder="SELECT nid F..." />
-            <marker date="1434555524000" expanded="true" signature="131225:131266" placeholder="SELECT name ..." />
-            <marker date="1434555524000" expanded="true" signature="132019:132047" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="132151:132192" placeholder="SELECT name ..." />
-            <marker date="1434555524000" expanded="true" signature="132405:132462" placeholder="SELECT uid, ..." />
-            <marker date="1434555524000" expanded="true" signature="133284:133324" placeholder="SELECT 1 FRO..." />
-            <marker date="1434555524000" expanded="true" signature="133756:133798" placeholder="SELECT uid f..." />
-            <marker date="1434555524000" expanded="true" signature="136011:136045" placeholder="SELECT COUNT..." />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/node/node.tokens.inc">
@@ -926,9 +619,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/tasktheme/preprocess/preprocess-header.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.1880141" vertical-offset="0" max-vertical-offset="851">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shortcut/shortcut.api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="46" selection-start="986" selection-end="986" vertical-scroll-proportion="0.6651376" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/node/node.install">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="-22.4" vertical-offset="3120" max-vertical-offset="19080">
+        <state line="184" column="1" selection-start="6171" selection-end="6318" vertical-scroll-proportion="1.0035843" vertical-offset="3120" max-vertical-offset="19080">
           <folding />
         </state>
       </provider>
@@ -936,31 +643,229 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
+    <entry file="file://$PROJECT_DIR$/modules/node/node.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="1" selection-start="1630" selection-end="1630" vertical-scroll-proportion="0.84407973" vertical-offset="0" max-vertical-offset="853">
-          <folding />
+        <state line="544" column="0" selection-start="18914" selection-end="18914" vertical-scroll-proportion="2.7586207" vertical-offset="10880" max-vertical-offset="83880">
+          <folding>
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT times..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT 1 FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT vid F..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT chang..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT r.vid..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT type ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT modul..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT n.nid..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT nid F..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT name ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT name ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT uid, ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT 1 FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT uid f..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shortcut/shortcut.admin.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="19" selection-start="4167" selection-end="4167" vertical-scroll-proportion="-7.724138" vertical-offset="2416" max-vertical-offset="15820">
+          <folding>
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/menu.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3007" column="26" selection-start="108553" selection-end="108570" vertical-scroll-proportion="-9.862069" vertical-offset="59794" max-vertical-offset="78520">
+          <folding>
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT mlid ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT menu_..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT menu_..." />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/shortcut/shortcut.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="-10.344828" vertical-offset="0" max-vertical-offset="15400">
+        <state line="366" column="24" selection-start="13972" selection-end="14042" vertical-scroll-proportion="-31.862068" vertical-offset="6336" max-vertical-offset="15400">
           <folding>
-            <marker date="1434555524000" expanded="true" signature="19934:19969" placeholder="SELECT COUNT..." />
-            <marker date="1434555524000" expanded="true" signature="21313:21362" placeholder="SELECT 1 FRO..." />
+            <marker date="1434971006637" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1434971006637" expanded="true" signature="-1:-1" placeholder="SELECT 1 FRO..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shortcut/shortcut.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="44" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-14.2" vertical-offset="845" max-vertical-offset="2420">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/entity/includes/entity.controller.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="6" selection-start="4097" selection-end="4097" vertical-scroll-proportion="0.34458673" vertical-offset="2524" max-vertical-offset="19660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/entity/includes/entity.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="6" selection-start="822" selection-end="822" vertical-scroll-proportion="0.34458673" vertical-offset="184" max-vertical-offset="6820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/user/user.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="364" column="9" selection-start="15359" selection-end="15359" vertical-scroll-proportion="0.34422404" vertical-offset="6925" max-vertical-offset="81460">
+          <folding>
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT uid F..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT r.rid..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT MAX(u..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT rid F..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT rid, ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT uid, ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT u.uid..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT modul..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT uid F..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT name ..." />
+            <marker date="1434555524000" expanded="true" signature="-1:-1" placeholder="SELECT uid, ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/entity/entity.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="325" column="9" selection-start="9387" selection-end="9387" vertical-scroll-proportion="0.34422404" vertical-offset="6145" max-vertical-offset="31440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="12" selection-start="318" selection-end="347" vertical-scroll-proportion="0.34324944" vertical-offset="0" max-vertical-offset="10820">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="44" selection-start="123" selection-end="123" vertical-scroll-proportion="0.06896552" vertical-offset="0" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products-block.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/product.pages.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="23" selection-start="836" selection-end="836" vertical-scroll-proportion="-15.862069" vertical-offset="0" max-vertical-offset="4920">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="21" selection-start="8985" selection-end="8985" vertical-scroll-proportion="0.5862069" vertical-offset="4390" max-vertical-offset="10020">
+        <state line="213" column="41" selection-start="8775" selection-end="8804" vertical-scroll-proportion="-146.89655" vertical-offset="0" max-vertical-offset="5600">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="54" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.33638445" vertical-offset="306" max-vertical-offset="1180">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/product.admin.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="35" selection-start="41" selection-end="41" vertical-scroll-proportion="-0.6896552" vertical-offset="0" max-vertical-offset="1760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="191" selection-end="191" vertical-scroll-proportion="0.13348165" vertical-offset="0" max-vertical-offset="899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="92" selection-end="92" vertical-scroll-proportion="0.08898777" vertical-offset="0" max-vertical-offset="899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/product.pages.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="227" column="1" selection-start="8058" selection-end="8058" vertical-scroll-proportion="-28.172413" vertical-offset="3723" max-vertical-offset="4660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/product.admin.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="1" selection-start="3225" selection-end="3225" vertical-scroll-proportion="-62.068966" vertical-offset="0" max-vertical-offset="1920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/products.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="238" column="19" selection-start="8456" selection-end="8456" vertical-scroll-proportion="-56.206898" vertical-offset="3130" max-vertical-offset="8020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/products.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/test/products.install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="15" selection-start="40" selection-end="40" vertical-scroll-proportion="0.022883296" vertical-offset="0" max-vertical-offset="1160">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>
