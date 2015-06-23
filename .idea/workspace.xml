@@ -29,16 +29,7 @@
       <file leaf-file-name="products.module" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="21" selection-start="4566" selection-end="4566" vertical-scroll-proportion="2.5287356" vertical-offset="0" max-vertical-offset="5600">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.info" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="23" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+            <state line="52" column="16" selection-start="2507" selection-end="2507" vertical-scroll-proportion="-3.9770114" vertical-offset="4500" max-vertical-offset="5500">
               <folding />
             </state>
           </provider>
@@ -99,7 +90,6 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/includes/product.pages.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/product.admin.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/templates/product.tpl" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/product.pages.inc" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/test/products.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/test/product.pages.inc" />
@@ -108,6 +98,7 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/test/products.install" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.install" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/products/products.module" />
       </list>
     </option>
   </component>
@@ -755,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.install">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="7" selection-start="2304" selection-end="2304" vertical-scroll-proportion="-41.6" vertical-offset="0" max-vertical-offset="1180">
@@ -772,9 +756,16 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="185" selection-end="185" vertical-scroll-proportion="0.1557286" vertical-offset="0" max-vertical-offset="899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/products/products.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="21" selection-start="4566" selection-end="4566" vertical-scroll-proportion="2.5287356" vertical-offset="0" max-vertical-offset="5600">
+        <state line="52" column="16" selection-start="2507" selection-end="2507" vertical-scroll-proportion="-3.9770114" vertical-offset="4500" max-vertical-offset="5500">
           <folding />
         </state>
       </provider>

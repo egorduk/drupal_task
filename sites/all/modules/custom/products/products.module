@@ -6,23 +6,23 @@ function product_entity_info() {
     return array(
         'product' => array(
             'label' => t('Product'),
-            /*'entity class' => 'Product',
-            'controller class' => 'ProductController',*/
-            'entity class' => 'Entity', // Класс сущности.
+            'entity class' => 'Product',
+            'controller class' => 'ProductController',
+           /* 'entity class' => 'Entity', // Класс сущности.
             'controller class' => 'EntityAPIController',
-            'uri callback' => 'product_uri',
+            'uri callback' => 'product_uri',*/
             'base table' => 'product',
-            'fieldable' => TRUE,
+            //'fieldable' => TRUE,
             // Чтобы иметь интеграцию с Views из коробки мы должны указать этот ключ
             // и наш модуль не должен  иметь реализованный
             // hook_views_data() в виде smessage_views_data().
-            'module' => 'products',
-            // Единственный ключ, который у нас есть и который нам нужен.
+            //'module' => 'products',
             'entity keys' => array(
                 'id' => 'id',
                 'label' => 'name'
             ),
-            'bundles' => array(
+            'bundles' => array(),
+            /*'bundles' => array(
                 // Ключ 'product' - машинное название типа.
                 'product' => array(
                     'label' => t('Product'), // Человеко-понятное название типа.
@@ -31,7 +31,7 @@ function product_entity_info() {
                         //'access arguments' => array('configure products settings'), // Права доступа в админку.
                     ),
                 ),
-            ),
+            ),*/
             // Чтобы код почти прямым путём пришёл к SMessage::defaultLabel().
             //'label callback' => 'entity_class_label',
             // Чтобы код почти прямым путём пришёл к SMessage::defaultUri().
@@ -43,20 +43,15 @@ function product_entity_info() {
             //'access callback'  => TRUE,
             // У нас нет типов и настраиваемых полей.
             //'bundles' => array(),
-          /*  'admin ui' => array(
+            'admin ui' => array(
                 // Лучше явно указать заменитель, это может быть полезным во
                 // многих случаях.
                 //'menu wildcard' => '%product',
                 // В нашей реализации SMessageContentUIController->hook_menu()
                 // мы легко получим этот путь и будем лепить к нему нужные адреса.
-                'path' => 'admin/config/content/products',
-                //'controller class' => 'ProductContentUIController',
-            ),*/
-            // Для простой сущности, не имеющей настраиваемых полей, режимы просмотра
-            // определять совсем необязательно - всё равно мы их нигде не увидим,
-            // кроме как в коде.
-            // Однако мы всё-таки разделяем режимы отображения и от этого разделения
-            // зависит вывод, поэтому их указание здесь будет хорошей документацией.
+                'path' => PRODUCT_PATH,
+                'controller class' => 'ProductContentUIController',
+            ),
             'view modes' => array(
                 'full' => array(
                     'label' => t('Full'),
