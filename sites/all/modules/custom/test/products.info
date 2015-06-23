@@ -1,4 +1,0 @@
-name = Test
-description = Defines the product entity and associated features.
-core = 7.x
-dependencies[] = entity

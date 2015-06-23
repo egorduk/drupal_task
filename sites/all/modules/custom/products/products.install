@@ -38,7 +38,7 @@ function products_schema() {
 }
 
 function products_install() {
-    $links[0]['link_title'] = 'Products';
+    /*$links[0]['link_title'] = 'Products';
     $links[0]['link_path'] = 'admin/config/content/products';
     $links[1]['link_title'] = 'Type products';
     $links[1]['link_path'] = 'admin/config/content/type_products';
@@ -50,5 +50,5 @@ function products_install() {
         $link['plid'] = 0;
         $link['menu_name'] = 'shortcut-set-1';
         menu_link_save($link);
-    }
+    }*/
 }
