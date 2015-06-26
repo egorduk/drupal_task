@@ -2,52 +2,40 @@
 class ProductController extends EntityAPIController {
     public function create(array $values = array()) {
         global $product, $image, $type;
+        dpm($product);
         $values += array(
-            'id' => $product->id,
+            //'id' => $product->id,
             'name' => $product->name,
             'info' => $product->info,
-            'created_at' => $product->created_at,
-            'updated_at' => $product->updated_at,
-            'image_id' => $image->fid,
-            'type_id' => $type->id,
+            'created_at' => REQUEST_TIME,
+            'updated_at' => REQUEST_TIME,
+            'image_id' => 1,
+            'type_id' => 1,
         );
         return parent::create($values);
     }
 
     public function buildContent($entity, $view_mode = 'full', $langcode = NULL, $content = array()) {
-        $build = parent::buildContent($entity, $view_mode, $langcode, $content);
-        global $user;
-        $links = array();
-        if ($view_mode == 'teaser') {
-            $links['smessage-readmore'] = array(
-                'title' => t('Read more'),
-                'href' => $entity->real_path(),
-                'html' => TRUE,
-            );
-        }
-        // Ссылку "Ответить" выводим только если пользователь - получатель и это не страница ответа.
-        if ($user->uid == $entity->recipient_uid &&
-            (!isset($entity->op) || 'reply' != $entity->op)) {
-            $links['smessage-reply'] = array(
-                'title' => t('Reply'),
-                'href' => $entity->real_path() . '/reply',
-                'html' => TRUE,
-            );
-        }
-        // Добавляем блок ссылок только если они есть (хотя бы одна).
-        if (!empty($links)) {
-            $build['links'] = array(
-                '#theme' => 'links__smessage',
-                '#pre_render' => array('drupal_pre_render_links'),
-                '#attributes' => array('class' => array('links', 'inline')),
-            );
-            $build['links']['smessage'] = array(
-                '#theme' => 'links__smessage__smessage',
-                '#links' => $links,
-                '#attributes' => array('class' => array('links', 'inline')),
-            );
-        }
-        return $build;
+        $wrapper = entity_metadata_wrapper('product', $entity);
+        //$content['author'] = array('#markup' => t('Created by: !author', array('!author' => $wrapper->uid->name->value(array('sanitize' => TRUE)))));
+        // Make Description and Status themed like default fields.
+        $content['description'] = array(
+            '#theme' => 'field',
+            '#weight' => 0,
+            '#title' =>t('Description'),
+            '#access' => TRUE,
+            '#label_display' => 'above',
+            '#view_mode' => 'full',
+            '#language' => LANGUAGE_NONE,
+            '#field_name' => 'field_fake_description',
+            '#field_type' => 'text',
+            '#entity_type' => 'product',
+            //'#bundle' => $entity->type,
+            '#items' => array(array('value' => $entity->info)),
+            '#formatter' => 'text_default',
+            0 => array('#markup' => check_plain($entity->info))
+        );
+        return parent::buildContent($entity, $view_mode, $langcode, $content);
     }
 
     public function view($entities, $view_mode = 'full', $langcode = NULL, $page = NULL) {

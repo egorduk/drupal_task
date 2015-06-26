@@ -1,12 +1,12 @@
 <?php
-function products_uninstall() {
+function product_uninstall() {
     /*cache_clear_all('products', 'cache', TRUE);
     drupal_uninstall_schema('products');
     menu_rebuild();*/
     menu_delete_links('shortcut-set-1');
 }
 
-function products_schema() {
+function product_schema() {
     $schema['type_product'] = array(
                 'fields'      => array(
                     'id'         => array('type' => 'serial',  'size' => 'normal',  'not null' => TRUE),
@@ -37,7 +37,7 @@ function products_schema() {
     return $schema;
 }
 
-function products_install() {
+function product_install() {
     /*$links[0]['link_title'] = 'Products';
     $links[0]['link_path'] = 'admin/config/content/products';
     $links[1]['link_title'] = 'Type products';

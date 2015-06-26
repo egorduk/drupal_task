@@ -4,12 +4,18 @@ class Product extends Entity {
         parent::__construct($values, 'product');
     }
 
-    protected function defaultLabel() {
+    /*protected function defaultLabel() {
         return truncate_utf8(strip_tags($this), 30, TRUE, TRUE);
+    }*/
+    protected function defaultLabel() {
+        return $this->title;
     }
 
-    protected function defaultUri() {
+    /*protected function defaultUri() {
         return array('path' => $this->real_path());
+    }*/
+    protected function defaultUri() {
+        return array('path' => 'product/' . $this->identifier());
     }
 
     public function real_path() {

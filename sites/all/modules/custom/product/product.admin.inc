@@ -1,6 +1,6 @@
 <?php
 function product_page_title($product) {
-  return $product->title;
+    return $product->name;
 }
 
 function product_page_view($product) {
@@ -26,24 +26,20 @@ function product_page_edit($product) {
 
 function product_form($form, &$form_state, $product, $op = 'update') {
     $form['#attributes']['class'][] = 'product-form';
-
     $form['product'] = array(
         '#type' => 'value',
         '#value' => $product,
     );
-
     $form['title'] = array(
         '#type' => 'textfield',
         '#title' => t('Title'),
         '#default_value' => !empty($product->title) ? $product->title : '',
         '#required' => TRUE,
     );
-
     $form['additional_settings'] = array(
         '#type' => 'vertical_tabs',
         '#weight' => 99,
     );
-
     // Информация об авторе продукта.
     $form['author'] = array(
         '#type' => 'fieldset',
@@ -55,7 +51,7 @@ function product_form($form, &$form_state, $product, $op = 'update') {
         '#attributes' => array(
             'class' => array('product-form-author'),
         ),
-        '#attached' => array(
+        /*'#attached' => array(
             'js' => array(
                 drupal_get_path('module', 'product') . '/js/product-fieldset-summaries.js',
                 array(
@@ -63,7 +59,7 @@ function product_form($form, &$form_state, $product, $op = 'update') {
                     'data' => array('anonymous' => variable_get('anonymous', t('Anonymous'))),
                 ),
             ),
-        ),
+        ),*/
         '#weight' => 90,
     );
     $form['author']['name'] = array(
@@ -82,7 +78,6 @@ function product_form($form, &$form_state, $product, $op = 'update') {
         '#description' => t('Format: %time. The date format is YYYY-MM-DD and %timezone is the time zone offset from UTC. Leave blank to use the time of form submission.', array('%time' => !empty($product->created) ? format_date($product->created, 'custom', 'Y-m-d H:i:s O') : format_date(REQUEST_TIME, 'custom', 'Y-m-d H:i:s O'), '%timezone' => !empty($product->created) ? format_date($product->created, 'custom', 'O') : format_date(REQUEST_TIME, 'custom', 'O'))),
         '#default_value' => !empty($product->created) ? format_date($product->created, 'custom', 'Y-m-d H:i:s O') : '',
     );
-
     // Статусы продукта.
     $form['options'] = array(
         '#type' => 'fieldset',
@@ -94,12 +89,12 @@ function product_form($form, &$form_state, $product, $op = 'update') {
         '#attributes' => array(
             'class' => array('product-form-options'),
         ),
-        '#attached' => array(
+        /*'#attached' => array(
             drupal_get_path('module', 'product') . '/js/product-fieldset-summaries.js',
-        ),
+        ),*/
         '#weight' => 95,
     );
-    $form['options']['status'] = array(
+    /*$form['options']['status'] = array(
         '#type' => 'radios',
         '#title' => t('Status'),
         '#default_value' => isset($product->status) ? $product->status : PRODUCT_PENDING,
@@ -108,8 +103,7 @@ function product_form($form, &$form_state, $product, $op = 'update') {
             PRODUCT_COMPLETED => product_status_get_title(PRODUCT_COMPLETED),
             PRODUCT_CANCELED => product_status_get_title(PRODUCT_CANCELED),
         ),
-    );
-
+    );*/
     // Кнопка отправки формы.
     $form['actions'] = array('#type' => 'actions');
     $form['actions']['submit'] = array(
@@ -117,10 +111,9 @@ function product_form($form, &$form_state, $product, $op = 'update') {
         '#value' => t('Save'),
         '#weight' => 5,
     );
-
     // Если пользователь редактирует продукт и у него есть разрешение для удаления продукта,
     // то добавляем кнопку "Удалить".
-    if ($op == 'update' && product_access('delete', 'product', $product)) {
+    if ($op == 'update' /*&& product_access('delete', 'product', $product)*/) {
         $form['actions']['delete'] = array(
             '#type' => 'submit',
             '#value' => t('Delete'),
@@ -128,83 +121,30 @@ function product_form($form, &$form_state, $product, $op = 'update') {
             '#submit' => array('product_form_delete_submit'),
         );
     }
-
     // Прикрепляем все созданные поля сущности к форме.
     field_attach_form('product', $product, $form, $form_state);
-
     return $form;
 }
 
-/**
- * Form validation handler for product_form().
- *
- * @see product_form()
- * @see product_form_submit()
- */
 function product_form_validate($form, &$form_state) {
-    $product = $form_state['values']['product'];
-
-    // Проверяем корректность автора.
-    $product->uid = 0;
-    if (!empty($form_state['values']['name'])) {
-        if ($account = user_load_by_name($form_state['values']['name'])) {
-            $product->uid = $account->uid;
-        }
-        elseif ($form_state['values']['name'] != variable_get('anonymous', t('Anonymous'))) {
-            form_set_error('name', t('The username %name does not exist.', array('%name' => $form_state['values']['name'])));
-        }
-    }
-
-    // Проверяем корректность даты публикации.
-    if (!empty($form_state['values']['date'])) {
-        if (strtotime($form_state['values']['date']) === FALSE) {
-            form_set_error('date', t('You have to specify a valid date.'));
-        }
-        else {
-            $date = date_create($form_state['values']['date']);
-            $product->created = $date->getTimestamp();
-        }
-    }
-    else {
-        $product->created = REQUEST_TIME;
-    }
 }
 
-/**
- * Form submission handler for product_form().
- *
- * @see product_form()
- * @see product_form_validate()
- */
 function product_form_submit($form, &$form_state) {
     $product = $form_state['values']['product'];
     $product->title = $form_state['values']['title'];
     $product->changed = REQUEST_TIME;
     $product->status = $form_state['values']['status'];
-
     field_attach_submit('product', $product, $form, $form_state);
-
     $is_new = !empty($product->is_new) ? TRUE : FALSE;
     $product->save();
-
     if ($is_new) {
         drupal_set_message(t('%title has been created.', array('%title' => $product->title)));
-    }
-    else {
+    } else {
         drupal_set_message(t('%title has been updated.', array('%title' => $product->title)));
     }
-
     $form_state['redirect'] = array('product/' . $product->id);
 }
 
-/**
- * Form submission handler for product_form().
- *
- * Handles the 'Delete' button on the product form.
- *
- * @see product_form()
- * @see product_form_validate()
- */
 function product_form_delete_submit($form, &$form_state) {
     $destination = array();
     if (isset($_GET['destination'])) {
@@ -226,16 +166,11 @@ function product_delete_confirm($form, &$form_state, $product) {
     );
 }
 
-/**
- * Executes product deletion.
- *
- * @see product_delete_confirm()
- */
 function product_delete_confirm_submit($form, &$form_state) {
     if ($form_state['values']['confirm']) {
         $product = product_load($form_state['values']['product_id']);
         product_delete($form_state['values']['product_id']);
         drupal_set_message(t('%title has been deleted.', array('%title' => $product->title)));
     }
-    $form_state['redirect'] = 'admin/config/product/products';
+    $form_state['redirect'] = 'admin/config/content/products';
 }

@@ -3,25 +3,37 @@
 define('PRODUCT_PATH', 'product');
 
 function product_entity_info() {
-    return array(
+    $return = array(
         'product' => array(
             'label' => t('Product'),
             'entity class' => 'Product',
             'controller class' => 'ProductController',
-           /* 'entity class' => 'Entity', // Класс сущности.
-            'controller class' => 'EntityAPIController',
-            'uri callback' => 'product_uri',*/
             'base table' => 'product',
-            //'fieldable' => TRUE,
+            'fieldable' => TRUE,
             // Чтобы иметь интеграцию с Views из коробки мы должны указать этот ключ
             // и наш модуль не должен  иметь реализованный
             // hook_views_data() в виде smessage_views_data().
-            //'module' => 'products',
+            'module' => 'product',
             'entity keys' => array(
                 'id' => 'id',
                 'label' => 'name'
             ),
+            'bundle keys' => array(
+                'bundle' => 'type',
+            ),
             'bundles' => array(),
+            'view modes' => array(
+                'full' => array(
+                    'label' => t('Full'),
+                    'custom settings' => FALSE,
+                ),
+                'admin' => array(
+                    'label' => t('Admin'),
+                    'custom settings' => TRUE,
+                ),
+            ),
+            'label callback' => 'entity_class_label',
+            'uri callback' => 'entity_class_uri',
             /*'bundles' => array(
                 // Ключ 'product' - машинное название типа.
                 'product' => array(
@@ -32,38 +44,17 @@ function product_entity_info() {
                     ),
                 ),
             ),*/
-            // Чтобы код почти прямым путём пришёл к SMessage::defaultLabel().
-            //'label callback' => 'entity_class_label',
-            // Чтобы код почти прямым путём пришёл к SMessage::defaultUri().
-            //'uri callback' => 'entity_class_uri',
-            // Здесь мы будем проверять доступ текущего пользователя ко всем
-            // возможным операциям с сообщениями, от создания до просмотра.
             // 'access callback' => 'product_access',
             //'access arguments' => array('administer site configuration'),
             //'access callback'  => TRUE,
-            // У нас нет типов и настраиваемых полей.
-            //'bundles' => array(),
             'admin ui' => array(
-                // Лучше явно указать заменитель, это может быть полезным во
-                // многих случаях.
-                //'menu wildcard' => '%product',
-                // В нашей реализации SMessageContentUIController->hook_menu()
-                // мы легко получим этот путь и будем лепить к нему нужные адреса.
-                'path' => PRODUCT_PATH,
+                'path' => 'admin/config/product',
+                'file' => 'product.ui.inc',
                 'controller class' => 'ProductContentUIController',
-            ),
-            'view modes' => array(
-                'full' => array(
-                    'label' => t('Full'),
-                    'custom settings' => TRUE,
-                ),
-                'admin' => array(
-                    'label' => t('Admin'),
-                    'custom settings' => TRUE,
-                ),
             ),
         )
     );
+    return $return;
 }
 
 function product_uri($product) {
@@ -72,8 +63,8 @@ function product_uri($product) {
     );
 }
 
-function product_load($product_id) {
-    $products = product_load_multiple(array($product_id), array());
+function product_load($product_id, $reset = FALSE) {
+    $products = product_load_multiple(array($product_id), array(), $reset);
     return $products ? reset($products) : FALSE;
 }
 
@@ -81,29 +72,43 @@ function product_load_multiple($product_ids = array(), $conditions = array(), $r
     return entity_load('product', $product_ids, $conditions, $reset);
 }
 
-function product_entity_load($entities, $type) {
-    // По умолчанию, сущность имеет только uid пользователя, который создал ее,
-    // добавляем этот код, чтобы получить еще и имя пользователя.
-    if ($type == 'product') {
-        foreach ($entities as $entity) {
-            if ($entity->type_id) {
-                /*if ($account = user_load($entity->type_id)) {
-                    $entity->name = $account->name;
-                }*/
-                $entity->type_name = 'type';
-            } else {
-                $entity->type_name = variable_get('anonymous', t('Anonymous'));
-            }
-        }
-    }
+function product_save($product) {
+    entity_save('product', $product);
 }
 
-function product_delete($product_id) {
-    product_delete_multiple(array($product_id));
+function product_delete($product) {
+    entity_delete('product', entity_id('product', $product));
 }
 
 function product_delete_multiple($product_ids) {
     entity_delete_multiple('product', $product_ids);
+}
+
+function product_entity_property_info_alter(&$info) {
+    $properties = &$info['product']['properties'];
+    $properties['created'] = array(
+        'label' => t("Date created"),
+        'type' => 'date',
+        'description' => t("The date the node was posted."),
+        'setter callback' => 'entity_property_verbatim_set',
+        'setter permission' => 'administer nodes',
+        'schema field' => 'created',
+    );
+    $properties['changed'] = array(
+        'label' => t("Date changed"),
+        'type' => 'date',
+        'schema field' => 'changed',
+        'description' => t("The date the node was most recently updated."),
+    );
+    $properties['uid'] = array(
+        'label' => t("Author"),
+        'type' => 'user',
+        'description' => t("The author of the task."),
+        'setter callback' => 'entity_property_verbatim_set',
+        'setter permission' => 'administer example_task entities',
+        'required' => TRUE,
+        'schema field' => 'uid',
+    );
 }
 
 function product_theme() {
@@ -134,15 +139,6 @@ function template_preprocess_product(&$variables) {
     field_attach_preprocess('product', $product, $variables['content'], $variables);
     $variables['submitted'] = t('Submitted by !username on !datetime', array('!username' => $variables['name'], '!datetime' => $variables['date']));
     $variables['title_attributes_array']['class'][] = 'product-title';
- /*   if ($variables['status'] == PRODUCT_PENDING) {
-        $variables['classes_array'][] = 'product-pending';
-    }
-    elseif ($variables['status'] == PRODUCT_COMPLETED) {
-        $variables['classes_array'][] = 'product-completed';
-    }
-    elseif ($variables['status'] == PRODUCT_CANCELED) {
-        $variables['classes_array'][] = 'product-canceled';
-    }*/
 }
 
 function product_view_multiple($products, $view_mode = 'full', $langcode = NULL) {
@@ -197,7 +193,17 @@ function product_build_content($product, $view_mode = 'full', $langcode = NULL) 
 }
 
 function product_menu() {
-    // Top level "Product" container.
+    $items['product/add'] = array(
+        'title' => 'Add product',
+        'page callback' => 'product_page_add',
+        'access callback' => TRUE,
+        //'access callback' => 'product_access',
+        'access arguments' => array('create', 'product'),
+        'file' => 'product.admin.inc',
+        'type' => MENU_LOCAL_ACTION,
+        'tab_parent' => 'product',
+        'tab_root' => 'product',
+    );
     $items['admin/config/product'] = array(
         'title' => 'Product',
         'description' => 'Administration tools.',
@@ -206,29 +212,29 @@ function product_menu() {
         'file' => 'system.admin.inc',
         'file path' => drupal_get_path('module', 'system'),
     );
-    $items['admin/config/product/products'] = array(
-        'title' => 'Products',
+
+    $items['admin/config/product/view'] = array(
+        /*'title' => 'Products',
         'description' => 'Configure general product settings, fields, and displays.',
-        'page callback' => 'product_admin_products',
+        'page callback' => 'product_admin',
         'access arguments' => array('administer products'),
         'type' => MENU_NORMAL_ITEM,
-        'file' => 'product.admin.inc',
+        'file' => 'product.admin.inc',*/
+
+        'title callback' => 'entity_label',
+        'title arguments' => array('product', 0),
+        'page callback' => 'product_view',
+        //'page arguments' => array($task_uri_argument_position),
+        //'access callback' => 'entity_access',
+        //'access arguments' => array('view', 'example_task', $task_uri_argument_position),
+        'file' => 'product.pages.inc',
     );
-    $items['admin/config/product/products/list'] = array(
+    /*$items['admin/config/product/products/list'] = array(
         'title' => 'Products',
         'type' => MENU_DEFAULT_LOCAL_TASK,
         'weight' => -10,
-    );
-    // Страница создания продукта.
-    $items['product/add'] = array(
-        'title' => 'Add product',
-        'page callback' => 'product_page_add',
-        'access callback' => TRUE,
-        //'access callback' => 'product_access',
-        'access arguments' => array('create', 'product'),
-        'file' => 'product.pages.inc',
-    );
-    // Страница просмотра продукта.
+    );*/
+
     $items['product/%product'] = array(
         'title callback' => 'product_page_title',
         'title arguments' => array(1),
@@ -243,7 +249,6 @@ function product_menu() {
         'type' => MENU_DEFAULT_LOCAL_TASK,
         'weight' => 0,
     );
-    // Страница редактирования продукта.
     $items['product/%product/edit'] = array(
         'title' => 'Edit',
         'page callback' => 'product_page_edit',
@@ -254,7 +259,6 @@ function product_menu() {
         'type' => MENU_LOCAL_TASK,
         'file' => 'product.pages.inc',
     );
-    // Страница удаления продукта.
     $items['product/%product/delete'] = array(
         'title' => 'Delete',
         'page callback' => 'drupal_get_form',
