@@ -1,24 +1,23 @@
 <?php
+
 class ProductController extends EntityAPIController {
     public function create(array $values = array()) {
-        global $product, $image, $type;
-        dpm($product);
+        $product_type = $values['product_type'];
         $values += array(
-            //'id' => $product->id,
-            'name' => $product->name,
-            'info' => $product->info,
+            'name' => '',
+            'info' => '',
             'created_at' => REQUEST_TIME,
             'updated_at' => REQUEST_TIME,
-            'image_id' => 1,
-            'type_id' => 1,
+            'image_id' => 0,
+            'type_id' => $product_type->id
         );
         return parent::create($values);
     }
 
     public function buildContent($entity, $view_mode = 'full', $langcode = NULL, $content = array()) {
+        dpm($entity);
         $wrapper = entity_metadata_wrapper('product', $entity);
-        //$content['author'] = array('#markup' => t('Created by: !author', array('!author' => $wrapper->uid->name->value(array('sanitize' => TRUE)))));
-        // Make Description and Status themed like default fields.
+        $content['author'] = array('#markup' => t('Created by: '));
         $content['description'] = array(
             '#theme' => 'field',
             '#weight' => 0,
@@ -30,43 +29,60 @@ class ProductController extends EntityAPIController {
             '#field_name' => 'field_fake_description',
             '#field_type' => 'text',
             '#entity_type' => 'product',
-            //'#bundle' => $entity->type,
+            '#bundle' => $entity->type,
             '#items' => array(array('value' => $entity->info)),
             '#formatter' => 'text_default',
             0 => array('#markup' => check_plain($entity->info))
         );
         return parent::buildContent($entity, $view_mode, $langcode, $content);
     }
+}
 
-    public function view($entities, $view_mode = 'full', $langcode = NULL, $page = NULL) {
-        // Основную работу делают за нас.
-        $view = parent::view($entities, $view_mode, $langcode, $page);
-        if (!empty($view)) {
-            // Мы просто поставим свою темизацию, соберём id сообщений,
-            // у которых надо обновить время прочтения и, попутно, покажем
-            // для таких сообщений, что они прочитаны, прямо в текущем выводе.
-            global $user;
-            $readed_ids = array();
-            $read_time = REQUEST_TIME;
-                foreach ($view[$this->entityType] as &$entity) {
-                $smessage = &$entity['#entity'];
-                if ($smessage->recipient_uid == $user->uid && 'full' == $view_mode) {
-                    $readed_ids[] = $smessage->smessage_id;
-                    // Показываем, что сообщение прочитано, для текущего вывода.
-                    $smessage->read_time = $read_time;
-                }
-                // Наша темизация.
-                $entity['#theme'] = $this->entityType;
-            }
-            unset($entity);
-            // Сохраняем для выбранных сообщений время прочтения.
-            if ($readed_ids) {
-                db_update('product')
-                    ->fields(array('read_time' => $read_time))
-                    ->condition('id', $readed_ids)
-                    ->execute();
-            }
-        }
-        return $view;
+class ProductTypeController extends EntityAPIControllerExportable {
+    public function create(array $values = array()) {
+        $values += array(
+            'name' => '',
+        );
+        return parent::create($values);
+    }
+
+    public function save($entity, DatabaseTransaction $transaction = NULL) {
+        parent::save($entity, $transaction);
+        // Rebuild menu registry. We do not call menu_rebuild directly, but set
+        // variable that indicates rebuild in the end.
+        // @see http://drupal.org/node/1399618
+        variable_set('menu_rebuild_needed', TRUE);
+    }
+}
+
+class ProductTypeUIController extends EntityDefaultUIController {
+    public function hook_menu() {
+        $items = parent::hook_menu();
+        $items[$this->path]['description'] = 'Manage Task types.';
+        return $items;
+    }
+}
+
+class Product extends Entity {
+    protected function defaultLabel() {
+        return $this->name;
+    }
+
+    protected function defaultUri() {
+        return array('path' => 'product/' . $this->identifier());
+    }
+}
+
+class ProductType extends Entity {
+    public $name;
+    public $label;
+    public $weight = 0;
+
+    public function __construct($values = array()) {
+        parent::__construct($values, 'product_type');
+    }
+
+    function isLocked() {
+        return isset($this->status) && empty($this->is_new) && (($this->status & ENTITY_IN_CODE) || ($this->status & ENTITY_FIXED));
     }
 }

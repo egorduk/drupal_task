@@ -1,128 +1,70 @@
 <?php
-function product_page_title($product) {
-    return $product->name;
-}
-
-function product_page_view($product) {
-    // For markup consistency with other pages, use product_view_multiple() rather than product_view().
-    $products = product_view_multiple(array($product->id => $product), 'full');
-    return $products;
-}
-
-function product_page_add() {
-    global $user;
-    $name = variable_get('anonymous', t('Anonymous'));
-    if ($user->uid && $account = user_load($user->uid)) {
-        $name = $account->name;
+function product_admin_page_add() {
+    $items = array();
+    foreach (product_types() as $task_type_key => $task_type) {
+        $items[] = l(entity_label('product_type', $task_type), 'product/add/' . $task_type_key);
     }
-    $product = entity_create('product', array('uid' => $user->uid, 'name' => $name));
-    return drupal_get_form('product_form', $product, 'create');
+    return array('list' => array('#theme' => 'item_list', '#items' => $items, '#title' => t('Select type of product to create.')));
 }
 
-function product_page_edit($product) {
-    drupal_set_title(t('<em>Edit</em> @title', array('@title' => $product->title)), PASS_THROUGH);
-    return drupal_get_form('product_form', $product);
+function product_add($type) {
+    $product_type = product_types($type);
+    $product = entity_create('product', array('product_type' => $product_type));
+    //dpm($product);
+   // drupal_set_title(t('Create @name', array('@name' => entity_label('product_type', $product_type))));
+    $output = drupal_get_form('product_form', $product);
+    return $output;
 }
 
-function product_form($form, &$form_state, $product, $op = 'update') {
-    $form['#attributes']['class'][] = 'product-form';
-    $form['product'] = array(
-        '#type' => 'value',
-        '#value' => $product,
-    );
-    $form['title'] = array(
+function product_form($form, &$form_state, $product) {
+    //dpm($product);
+    $form_state['product'] = $product;
+    $form['name'] = array(
         '#type' => 'textfield',
-        '#title' => t('Title'),
-        '#default_value' => !empty($product->title) ? $product->title : '',
         '#required' => TRUE,
+        '#title' => t('Name'),
+        '#default_value' => $product->name,
     );
-    $form['additional_settings'] = array(
-        '#type' => 'vertical_tabs',
-        '#weight' => 99,
+    $form['info'] = array(
+        '#type' => 'textarea',
+        '#required' => TRUE,
+        '#title' => t('Info'),
+        '#default_value' => $product->info,
     );
-    // Информация об авторе продукта.
-    $form['author'] = array(
-        '#type' => 'fieldset',
-        '#access' => user_access('administer products'),
-        '#title' => t('Authoring information'),
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
-        '#group' => 'additional_settings',
-        '#attributes' => array(
-            'class' => array('product-form-author'),
-        ),
-        /*'#attached' => array(
-            'js' => array(
-                drupal_get_path('module', 'product') . '/js/product-fieldset-summaries.js',
-                array(
-                    'type' => 'setting',
-                    'data' => array('anonymous' => variable_get('anonymous', t('Anonymous'))),
-                ),
-            ),
-        ),*/
-        '#weight' => 90,
+    $form['type'] = array(
+        '#type' => 'value',
+        '#value' => $product->type_id,
     );
-    $form['author']['name'] = array(
-        '#type' => 'textfield',
-        '#title' => t('Authored by'),
-        '#maxlength' => 60,
-        '#autocomplete_path' => 'user/autocomplete',
-        '#default_value' => !empty($product->name) ? $product->name : '',
-        '#weight' => -1,
-        '#description' => t('Leave blank for %anonymous.', array('%anonymous' => variable_get('anonymous', t('Anonymous')))),
+    $form['img'] = array(
+        '#title'         => t('Product image'),
+        '#description'   => t(''),
+        '#type'          => 'file',
+        //'#default_value' => $product ? $product['img'] : '',
+        '#required'      => false
     );
-    $form['author']['date'] = array(
-        '#type' => 'textfield',
-        '#title' => t('Authored on'),
-        '#maxlength' => 25,
-        '#description' => t('Format: %time. The date format is YYYY-MM-DD and %timezone is the time zone offset from UTC. Leave blank to use the time of form submission.', array('%time' => !empty($product->created) ? format_date($product->created, 'custom', 'Y-m-d H:i:s O') : format_date(REQUEST_TIME, 'custom', 'Y-m-d H:i:s O'), '%timezone' => !empty($product->created) ? format_date($product->created, 'custom', 'O') : format_date(REQUEST_TIME, 'custom', 'O'))),
-        '#default_value' => !empty($product->created) ? format_date($product->created, 'custom', 'Y-m-d H:i:s O') : '',
+    //field_attach_form('product', $task, $form, $form_state);
+    $submit = array();
+    if (!empty($form['#submit'])) {
+        $submit += $form['#submit'];
+    }
+    $form['actions'] = array(
+        '#weight' => 100,
     );
-    // Статусы продукта.
-    $form['options'] = array(
-        '#type' => 'fieldset',
-        '#access' => user_access('administer products'),
-        '#title' => t('Product status'),
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
-        '#group' => 'additional_settings',
-        '#attributes' => array(
-            'class' => array('product-form-options'),
-        ),
-        /*'#attached' => array(
-            drupal_get_path('module', 'product') . '/js/product-fieldset-summaries.js',
-        ),*/
-        '#weight' => 95,
-    );
-    /*$form['options']['status'] = array(
-        '#type' => 'radios',
-        '#title' => t('Status'),
-        '#default_value' => isset($product->status) ? $product->status : PRODUCT_PENDING,
-        '#options' => array(
-            PRODUCT_PENDING => product_status_get_title(PRODUCT_PENDING),
-            PRODUCT_COMPLETED => product_status_get_title(PRODUCT_COMPLETED),
-            PRODUCT_CANCELED => product_status_get_title(PRODUCT_CANCELED),
-        ),
-    );*/
-    // Кнопка отправки формы.
-    $form['actions'] = array('#type' => 'actions');
     $form['actions']['submit'] = array(
         '#type' => 'submit',
-        '#value' => t('Save'),
-        '#weight' => 5,
+        '#value' => t('Create new product'),
+        '#submit' => $submit + array('product_form_submit'),
     );
-    // Если пользователь редактирует продукт и у него есть разрешение для удаления продукта,
-    // то добавляем кнопку "Удалить".
-    if ($op == 'update' /*&& product_access('delete', 'product', $product)*/) {
+    // Show Delete button if we edit task.
+    /*$task_id = entity_id('example_task' ,$task);
+    if (!empty($task_id) && example_task_access('edit', $task)) {
         $form['actions']['delete'] = array(
             '#type' => 'submit',
             '#value' => t('Delete'),
-            '#weight' => 15,
-            '#submit' => array('product_form_delete_submit'),
+            '#submit' => array('example_task_form_submit_delete'),
         );
-    }
-    // Прикрепляем все созданные поля сущности к форме.
-    field_attach_form('product', $product, $form, $form_state);
+    }*/
+    $form['#validate'][] = 'product_form_validate';
     return $form;
 }
 
@@ -130,19 +72,25 @@ function product_form_validate($form, &$form_state) {
 }
 
 function product_form_submit($form, &$form_state) {
-    $product = $form_state['values']['product'];
-    $product->title = $form_state['values']['title'];
+    /*$product = $form_state['values']['product'];
+    $product->name = $form_state['values']['name'];
     $product->changed = REQUEST_TIME;
-    $product->status = $form_state['values']['status'];
-    field_attach_submit('product', $product, $form, $form_state);
+    //field_attach_submit('product', $product, $form, $form_state);
     $is_new = !empty($product->is_new) ? TRUE : FALSE;
     $product->save();
     if ($is_new) {
-        drupal_set_message(t('%title has been created.', array('%title' => $product->title)));
+        drupal_set_message(t('%title has been created.', array('%title' => $product->name)));
     } else {
-        drupal_set_message(t('%title has been updated.', array('%title' => $product->title)));
+        drupal_set_message(t('%title has been updated.', array('%title' => $product->name)));
     }
-    $form_state['redirect'] = array('product/' . $product->id);
+    $form_state['redirect'] = array('product/' . $product->id);*/
+    $product = $form_state['product'];
+    entity_form_submit_build_entity('product', $product, $form, $form_state);
+    product_save($product);
+    $product_uri = entity_uri('product', $product);
+    //dpm($product_uri);
+    $form_state['redirect'] = $product_uri['path'];
+    drupal_set_message(t('Product %title created', array('%title' => entity_label('product', $product))));
 }
 
 function product_form_delete_submit($form, &$form_state) {
@@ -173,4 +121,103 @@ function product_delete_confirm_submit($form, &$form_state) {
         drupal_set_message(t('%title has been deleted.', array('%title' => $product->title)));
     }
     $form_state['redirect'] = 'admin/config/content/products';
+}
+
+function product_type_form($form, &$form_state, $task_type, $op = 'edit') {
+
+    if ($op == 'clone') {
+        $task_type->label .= ' (cloned)';
+        $task_type->type = '';
+    }
+
+    $form['label'] = array(
+        '#title' => t('Label'),
+        '#type' => 'textfield',
+        '#default_value' => $task_type->label,
+        '#description' => t('The human-readable name of this task type.'),
+        '#required' => TRUE,
+        '#size' => 30,
+    );
+
+    // Machine-readable type name.
+    $form['type'] = array(
+        '#type' => 'machine_name',
+        '#default_value' => isset($task_type->type) ? $task_type->type : '',
+        '#maxlength' => 32,
+        '#disabled' => $task_type->isLocked() && $op != 'clone',
+        '#machine_name' => array(
+            'exists' => 'example_task_types',
+            'source' => array('label'),
+        ),
+        '#description' => t('A unique machine-readable name for this task type. It must only contain lowercase letters, numbers, and underscores.'),
+    );
+
+    $form['description'] = array(
+        '#type' => 'textarea',
+        '#default_value' => isset($task_type->description) ? $task_type->description : '',
+        '#description' => t('Description about the task type.'),
+    );
+
+    $form['actions'] = array('#type' => 'actions');
+    $form['actions']['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Save task type'),
+        '#weight' => 40,
+    );
+
+    if (!$task_type->isLocked() && $op != 'add' && $op != 'clone') {
+        $form['actions']['delete'] = array(
+            '#type' => 'submit',
+            '#value' => t('Delete task type'),
+            '#weight' => 45,
+            '#limit_validation_errors' => array(),
+            '#submit' => array('example_task_type_form_submit_delete')
+        );
+    }
+    return $form;
+}
+
+/**
+ * Submit handler for creating/editing task_type.
+ */
+function product_type_form_submit(&$form, &$form_state) {
+    $task_type = entity_ui_form_submit_build_entity($form, $form_state);
+    // Save and go back.
+    example_task_type_save($task_type);
+
+    // Redirect user back to list of task types.
+    $form_state['redirect'] = 'admin/structure/task-types';
+}
+
+function product_type_form_submit_delete(&$form, &$form_state) {
+    $form_state['redirect'] = 'admin/structure/task-types/' . $form_state['example_task_type']->type . '/delete';
+}
+
+/**
+ * Task type delete form.
+ */
+function product_type_form_delete_confirm($form, &$form_state, $task_type) {
+    $form_state['task_type'] = $task_type;
+    // Always provide entity id in the same form key as in the entity edit form.
+    $form['task_type_id'] = array('#type' => 'value', '#value' => entity_id('example_task_type' ,$task_type));
+    return confirm_form($form,
+        t('Are you sure you want to delete task type %title?', array('%title' => entity_label('task_type', $task_type))),
+        'task/' . entity_id('example_task_type' ,$task_type),
+        t('This action cannot be undone.'),
+        t('Delete'),
+        t('Cancel')
+    );
+}
+
+/**
+ * Task type delete form submit handler.
+ */
+function product_type_form_delete_confirm_submit($form, &$form_state) {
+    $task_type = $form_state['task_type'];
+    example_task_type_delete($task_type);
+
+    watchdog('example_task_type', '@type: deleted %title.', array('@type' => $task_type->type, '%title' => $task_type->label));
+    drupal_set_message(t('@type %title has been deleted.', array('@type' => $task_type->type, '%title' => $task_type->label)));
+
+    $form_state['redirect'] = 'admin/structure/task-types';
 }

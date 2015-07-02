@@ -10,6 +10,7 @@ function product_entity_info() {
             'controller class' => 'ProductController',
             'base table' => 'product',
             'fieldable' => TRUE,
+            'load hook' => 'product_load',
             // Чтобы иметь интеграцию с Views из коробки мы должны указать этот ключ
             // и наш модуль не должен  иметь реализованный
             // hook_views_data() в виде smessage_views_data().
@@ -47,21 +48,147 @@ function product_entity_info() {
             // 'access callback' => 'product_access',
             //'access arguments' => array('administer site configuration'),
             //'access callback'  => TRUE,
-            'admin ui' => array(
+           /* 'admin ui' => array(
                 'path' => 'admin/config/product',
                 'file' => 'product.ui.inc',
                 'controller class' => 'ProductContentUIController',
-            ),
+            ),*/
         )
+    );
+    $return['product_type'] = array(
+        'label' => t('Product Type'),
+        'entity class' => 'ProductType',
+        'controller class' => 'ProductTypeController',
+        'base table' => 'type_product',
+        'fieldable' => FALSE,
+        'bundle of' => 'product',
+        'exportable' => TRUE,
+        'entity keys' => array(
+            'id' => 'id',
+            //'name' => 'name',
+            'label' => 'name'
+        ),
+        'module' => 'product',
+        'admin ui' => array(
+            'path' => 'admin/structure/product_types',
+            'file' => 'product.admin.inc',
+            'controller class' => 'ProductTypeUIController',
+        ),
+        // Enable the entity API's admin UI.
+       /* 'admin ui' => array(
+            'path' => 'admin/structure/product_types',
+            'file' => 'product.admin.inc',
+            'controller class' => 'ProductTypeUIController',
+        ),*/
+        //'access callback' => 'example_task_type_access',
     );
     return $return;
 }
 
-function product_uri($product) {
+
+function product_menu() {
+    $items['admin/config/product/add'] = array(
+        'title' => 'Add product',
+        'page callback' => 'product_admin_page_add',
+        'access callback' => TRUE,
+        //'access callback' => 'product_access',
+        //'access arguments' => array('create', 'product'),
+        'file' => 'product.admin.inc',
+        'type' => MENU_LOCAL_ACTION,
+        'tab_parent' => 'product',
+        'tab_root' => 'product',
+    );
+    $items['admin/config/product'] = array(
+        'title' => 'Product',
+        'description' => 'Administration tools.',
+        'page callback' => 'system_admin_menu_block_page',
+        'access arguments' => array('access administration pages'),
+        'file' => 'system.admin.inc',
+        'file path' => drupal_get_path('module', 'system'),
+    );
+
+    $items['admin/config/product/view'] = array(
+        /*'title' => 'Products',
+        'description' => 'Configure general product settings, fields, and displays.',
+        'page callback' => 'product_admin',
+        'access arguments' => array('administer products'),
+        'type' => MENU_NORMAL_ITEM,
+        'file' => 'product.admin.inc',*/
+
+        'title callback' => 'entity_label',
+        'title arguments' => array('product', 0),
+        'page callback' => 'product_view',
+        //'page arguments' => array($task_uri_argument_position),
+        //'access callback' => 'entity_access',
+        //'access arguments' => array('view', 'example_task', $task_uri_argument_position),
+        'file' => 'product.pages.inc',
+    );
+    /*$items['admin/config/product/products/list'] = array(
+        'title' => 'Products',
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+        'weight' => -10,
+    );*/
+    $items['product/%product'] = array(
+        'title callback' => 'entity_label',
+        'title arguments' => array('product', 1),
+        'page callback' => 'product_page_view',
+        'page arguments' => array(1),
+        'access callback' => TRUE,
+        //'access callback' => 'product_access',
+        //'access arguments' => array('view', 'product', 1),
+        'file' => 'product.pages.inc',
+    );
+    $items['product/%product/view'] = array(
+        'title' => 'View',
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+        'weight' => 0,
+    );
+    $items['product/%product/edit'] = array(
+        'title' => 'Edit',
+        'page callback' => 'product_page_edit',
+        'page arguments' => array(1),
+        'access callback' => 'product_access',
+        'access arguments' => array('update', 'product', 1),
+        'weight' => 1,
+        'type' => MENU_LOCAL_TASK,
+        'file' => 'product.pages.inc',
+    );
+    $items['product/%product/delete'] = array(
+        'title' => 'Delete',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('product_delete_confirm', 1),
+        'access callback' => 'product_access',
+        'access arguments' => array('delete', 'product', 1),
+        'file' => 'product.pages.inc',
+    );
+    foreach (product_types() as $type => $info) {
+        $items['product/add/' . $type] = array(
+            'title' => 'Add product',
+            'page callback' => 'product_add',
+            'page arguments' => array(2),
+            'access callback' => TRUE,
+            //'access callback' => 'entity_access',
+            //'access arguments' => array('create', 'example_task', $type),
+            'file' => 'product.admin.inc',
+        );
+    }
+    $items['admin/structure/product_types/%product_type/delete'] = array(
+        'title' => 'Delete',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('product_type_form_delete_confirm', 4),
+        //'access arguments' => array('administer example_task types'),
+        'weight' => 1,
+        'type' => MENU_NORMAL_ITEM,
+        'file' => 'product.admin.inc',
+    );
+    return $items;
+}
+
+/*function product_uri($product) {
     return array(
         'path' => 'product/' . $product->id,
     );
-}
+}*/
 
 function product_load($product_id, $reset = FALSE) {
     $products = product_load_multiple(array($product_id), array(), $reset);
@@ -111,15 +238,6 @@ function product_entity_property_info_alter(&$info) {
     );
 }
 
-function product_theme() {
-    return array(
-        'product' => array(
-            'render element' => 'elements',
-            'template' => 'templates/product',
-        ),
-    );
-}
-
 function template_preprocess_product(&$variables) {
     $variables['view_mode'] = $variables['elements']['#view_mode'];
     $variables['product'] = $variables['elements']['#product'];
@@ -141,134 +259,52 @@ function template_preprocess_product(&$variables) {
     $variables['title_attributes_array']['class'][] = 'product-title';
 }
 
-function product_view_multiple($products, $view_mode = 'full', $langcode = NULL) {
-    // Подготавливаем данные для отображения.
-    field_attach_prepare_view('product', $products, $view_mode, $langcode);
-    entity_prepare_view('product', $products, $langcode);
-    $build = array();
-    $weight = 0;
-    foreach ($products as $product) {
-        $build['products'][$product->id] = product_view($product, $view_mode, $langcode);
-        $build['products'][$product->id]['#weight'] = $weight++;
-    }
-    $build['products']['#sorted'] = TRUE;
-    return $build;
+/*function product_type_access($op, $entity = NULL) {
+    return user_access('administer example_task types');
+}*/
+
+/**
+ * Load task Type.
+ */
+function product_type_load($task_type) {
+    return product_types($task_type);
 }
 
-function product_view($product, $view_mode = 'full', $langcode = NULL) {
-    if (!isset($langcode)) {
-        global $language;
-        $langcode = $language->language;
-    }
-    // Заполняем $product->content данными в виде рендерного массива.
-    product_build_content($product, $view_mode, $langcode);
-    $build = $product->content;
-    // Скрываем данные, чтобы избежать их дублирования при выводе $product->content.
-    unset($product->content);
-    $build += array(
-        '#theme' => 'product',
-        '#product' => $product,
-        '#view_mode' => $view_mode,
-        '#language' => $langcode,
-    );
-    return $build;
+/**
+ * List of task Types.
+ */
+function product_types($type_name = NULL) {
+    $types = entity_load_multiple_by_name('product_type', isset($type_name) ? array($type_name) : FALSE);
+    return isset($type_name) ? reset($types) : $types;
 }
 
-function product_build_content($product, $view_mode = 'full', $langcode = NULL) {
-    if (!isset($langcode)) {
-        global $language;
-        $langcode = $language->language;
-    }
-    // Удаляем существующий конент, если существует.
-    $product->content = array();
-    field_attach_prepare_view('product', array($product->id => $product), $view_mode, $langcode);
-    entity_prepare_view('product', array($product->id => $product), $langcode);
-    $product->content += field_attach_view('product', $product, $view_mode, $langcode);
-    $product->content += array('#view_mode' => $view_mode);
-    $product->content['links'] = array(
-        '#theme' => 'links__product',
-        '#pre_render' => array('drupal_pre_render_links'),
-        '#attributes' => array('class' => array('links')),
-    );
+/**
+ * Save task type entity.
+ */
+function product_type_save($task_type) {
+    entity_save('product_type', $task_type);
 }
 
-function product_menu() {
-    $items['product/add'] = array(
-        'title' => 'Add product',
-        'page callback' => 'product_page_add',
-        'access callback' => TRUE,
-        //'access callback' => 'product_access',
-        'access arguments' => array('create', 'product'),
-        'file' => 'product.admin.inc',
-        'type' => MENU_LOCAL_ACTION,
-        'tab_parent' => 'product',
-        'tab_root' => 'product',
-    );
-    $items['admin/config/product'] = array(
-        'title' => 'Product',
-        'description' => 'Administration tools.',
-        'page callback' => 'system_admin_menu_block_page',
-        'access arguments' => array('access administration pages'),
-        'file' => 'system.admin.inc',
-        'file path' => drupal_get_path('module', 'system'),
-    );
-
-    $items['admin/config/product/view'] = array(
-        /*'title' => 'Products',
-        'description' => 'Configure general product settings, fields, and displays.',
-        'page callback' => 'product_admin',
-        'access arguments' => array('administer products'),
-        'type' => MENU_NORMAL_ITEM,
-        'file' => 'product.admin.inc',*/
-
-        'title callback' => 'entity_label',
-        'title arguments' => array('product', 0),
-        'page callback' => 'product_view',
-        //'page arguments' => array($task_uri_argument_position),
-        //'access callback' => 'entity_access',
-        //'access arguments' => array('view', 'example_task', $task_uri_argument_position),
-        'file' => 'product.pages.inc',
-    );
-    /*$items['admin/config/product/products/list'] = array(
-        'title' => 'Products',
-        'type' => MENU_DEFAULT_LOCAL_TASK,
-        'weight' => -10,
-    );*/
-
-    $items['product/%product'] = array(
-        'title callback' => 'product_page_title',
-        'title arguments' => array(1),
-        'page callback' => 'product_page_view',
-        'page arguments' => array(1),
-        'access callback' => 'product_access',
-        'access arguments' => array('view', 'product', 1),
-        'file' => 'product.pages.inc',
-    );
-    $items['product/%product/view'] = array(
-        'title' => 'View',
-        'type' => MENU_DEFAULT_LOCAL_TASK,
-        'weight' => 0,
-    );
-    $items['product/%product/edit'] = array(
-        'title' => 'Edit',
-        'page callback' => 'product_page_edit',
-        'page arguments' => array(1),
-        'access callback' => 'product_access',
-        'access arguments' => array('update', 'product', 1),
-        'weight' => 1,
-        'type' => MENU_LOCAL_TASK,
-        'file' => 'product.pages.inc',
-    );
-    $items['product/%product/delete'] = array(
-        'title' => 'Delete',
-        'page callback' => 'drupal_get_form',
-        'page arguments' => array('product_delete_confirm', 1),
-        'access callback' => 'product_access',
-        'access arguments' => array('delete', 'product', 1),
-        'file' => 'product.pages.inc',
-    );
-    return $items;
+/**
+ * Delete single case type.
+ */
+function product_type_delete($task_type) {
+    entity_delete('product_type', entity_id('product_type' ,$task_type));
 }
 
-function product_status_get_title($id = NULL) {
+/**
+ * Delete multiple case types.
+ */
+function product_type_delete_multiple($task_type_ids) {
+    entity_delete_multiple('product_type', $task_type_ids);
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function product_views_api() {
+    return array(
+        'api' => 3,
+        'path' => drupal_get_path('module', 'product'),
+    );
 }
