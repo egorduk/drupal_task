@@ -87,7 +87,7 @@ function product_entity_info() {
 
 
 function product_menu() {
-    $items['admin/config/product/add'] = array(
+    /*$items['admin/config/product/add'] = array(
         'title' => 'Add product',
         'page callback' => 'product_admin_page_add',
         'access callback' => TRUE,
@@ -97,36 +97,6 @@ function product_menu() {
         'type' => MENU_LOCAL_ACTION,
         'tab_parent' => 'product',
         'tab_root' => 'product',
-    );
-    $items['admin/config/product'] = array(
-        'title' => 'Product',
-        'description' => 'Administration tools.',
-        'page callback' => 'system_admin_menu_block_page',
-        'access arguments' => array('access administration pages'),
-        'file' => 'system.admin.inc',
-        'file path' => drupal_get_path('module', 'system'),
-    );
-
-    $items['admin/config/product/view'] = array(
-        /*'title' => 'Products',
-        'description' => 'Configure general product settings, fields, and displays.',
-        'page callback' => 'product_admin',
-        'access arguments' => array('administer products'),
-        'type' => MENU_NORMAL_ITEM,
-        'file' => 'product.admin.inc',*/
-
-        'title callback' => 'entity_label',
-        'title arguments' => array('product', 0),
-        'page callback' => 'product_view',
-        //'page arguments' => array($task_uri_argument_position),
-        //'access callback' => 'entity_access',
-        //'access arguments' => array('view', 'example_task', $task_uri_argument_position),
-        'file' => 'product.pages.inc',
-    );
-    /*$items['admin/config/product/products/list'] = array(
-        'title' => 'Products',
-        'type' => MENU_DEFAULT_LOCAL_TASK,
-        'weight' => -10,
     );*/
     $items['product/%product'] = array(
         'title callback' => 'entity_label',
@@ -138,6 +108,47 @@ function product_menu() {
         //'access arguments' => array('view', 'product', 1),
         'file' => 'product.pages.inc',
     );
+    $items['product_type/%product_type'] = array(
+        'title callback' => 'entity_label',
+        'title arguments' => array('product_type', 1),
+        'page callback' => 'product_type_page_view',
+        'page arguments' => array(1),
+        'access callback' => TRUE,
+        //'access callback' => 'product_access',
+        //'access arguments' => array('view', 'product', 1),
+        'file' => 'product_type.pages.inc',
+    );
+
+    /*$items['admin/config/product'] = array(
+        'title' => 'Product',
+        'description' => 'Administration tools.',
+        'page callback' => 'system_admin_menu_block_page',
+        'access arguments' => array('access administration pages'),
+        'file' => 'system.admin.inc',
+        'file path' => drupal_get_path('module', 'system'),
+    );*/
+
+    $items['products/view'] = array(
+        /*'title' => 'Products',
+        'description' => 'Configure general product settings, fields, and displays.',
+        'page callback' => 'product_admin',
+        'access arguments' => array('administer products'),
+        'type' => MENU_NORMAL_ITEM,
+        'file' => 'product.admin.inc',*/
+        //'title callback' => 'entity_label',
+        //'title arguments' => array('product', 0),
+        'page callback' => 'products_page_view',
+        'access callback' => TRUE,
+        //'page arguments' => array($task_uri_argument_position),
+        //'access callback' => 'entity_access',
+        //'access arguments' => array('view', 'example_task', $task_uri_argument_position),
+        'file' => 'product.pages.inc',
+    );
+    /*$items['admin/config/products/view'] = array(
+        'title' => 'Products',
+        'type' => MENU_DEFAULT_LOCAL_TASK,
+        'weight' => -10,
+    );*/
     $items['product/%product/view'] = array(
         'title' => 'View',
         'type' => MENU_DEFAULT_LOCAL_TASK,
@@ -172,7 +183,7 @@ function product_menu() {
             'file' => 'product.admin.inc',
         );
     }
-    $items['admin/structure/product_types/%product_type/delete'] = array(
+    /*$items['admin/structure/product_types/%product_type/delete'] = array(
         'title' => 'Delete',
         'page callback' => 'drupal_get_form',
         'page arguments' => array('product_type_form_delete_confirm', 4),
@@ -180,7 +191,7 @@ function product_menu() {
         'weight' => 1,
         'type' => MENU_NORMAL_ITEM,
         'file' => 'product.admin.inc',
-    );
+    );*/
     return $items;
 }
 

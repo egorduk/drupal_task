@@ -16,9 +16,23 @@ class ProductController extends EntityAPIController {
 
     public function buildContent($entity, $view_mode = 'full', $langcode = NULL, $content = array()) {
         dpm($entity);
-        $wrapper = entity_metadata_wrapper('product', $entity);
-        $content['author'] = array('#markup' => t('Created by: '));
-        $content['description'] = array(
+        $content['name'] = array(
+            '#theme' => 'field',
+            '#weight' => 0,
+            '#title' =>t('Name'),
+            '#access' => TRUE,
+            '#label_display' => 'above',
+            '#view_mode' => 'full',
+            '#language' => LANGUAGE_NONE,
+            '#field_name' => 'field_fake_description',
+            '#field_type' => 'text',
+            '#entity_type' => 'product',
+            '#bundle' => $entity->type_id,
+            '#items' => array(array('value' => $entity->name)),
+            '#formatter' => 'text_default',
+            0 => array('#markup' => check_plain($entity->name))
+        );
+        $content['info'] = array(
             '#theme' => 'field',
             '#weight' => 0,
             '#title' =>t('Description'),
@@ -29,10 +43,58 @@ class ProductController extends EntityAPIController {
             '#field_name' => 'field_fake_description',
             '#field_type' => 'text',
             '#entity_type' => 'product',
-            '#bundle' => $entity->type,
+            '#bundle' => $entity->type_id,
             '#items' => array(array('value' => $entity->info)),
             '#formatter' => 'text_default',
             0 => array('#markup' => check_plain($entity->info))
+        );
+        $content['created_at'] = array(
+            '#theme' => 'field',
+            '#weight' => 0,
+            '#title' =>t('Created at'),
+            '#access' => TRUE,
+            '#label_display' => 'above',
+            '#view_mode' => 'full',
+            '#language' => LANGUAGE_NONE,
+            '#field_name' => 'field_fake_description',
+            '#field_type' => 'text',
+            '#entity_type' => 'product',
+            '#bundle' => $entity->type_id,
+            '#items' => array(array('value' => $entity->created_at)),
+            '#formatter' => 'text_default',
+            0 => array('#markup' => check_plain($entity->created_at))
+        );
+        $content['image'] = array(
+            '#theme' => 'field',
+            '#weight' => 0,
+            '#title' =>t('Image'),
+            '#access' => TRUE,
+            '#label_display' => 'above',
+            '#view_mode' => 'full',
+            '#language' => LANGUAGE_NONE,
+            '#field_name' => 'field_fake_description',
+            '#field_type' => 'text',
+            '#entity_type' => 'product',
+            '#bundle' => $entity->type_id,
+            '#items' => array(array('value' => $entity->image_id)),
+            '#formatter' => 'text_default',
+            0 => array('#markup' => check_plain($entity->image_id))
+        );
+        $content['type'] = array(
+            '#theme' => 'field',
+            '#weight' => 0,
+            '#title' =>t('Type name'),
+            '#access' => TRUE,
+            '#label_display' => 'above',
+            '#view_mode' => 'full',
+            '#language' => LANGUAGE_NONE,
+            '#field_name' => 'field_fake_description',
+            '#field_type' => 'text',
+            '#entity_type' => 'product',
+            '#bundle' => $entity->type_id,
+            '#items' => array(array('value' => $entity->type_id)),
+            '#formatter' => 'text_default',
+            0 => array('#markup' => check_plain($entity->type_id))
         );
         return parent::buildContent($entity, $view_mode, $langcode, $content);
     }
@@ -52,6 +114,26 @@ class ProductTypeController extends EntityAPIControllerExportable {
         // variable that indicates rebuild in the end.
         // @see http://drupal.org/node/1399618
         variable_set('menu_rebuild_needed', TRUE);
+    }
+
+    public function buildContent($entity, $view_mode = 'full', $langcode = NULL, $content = array()) {
+        $content['name'] = array(
+            '#theme' => 'field',
+            '#weight' => 0,
+            '#title' =>t('Name'),
+            '#access' => TRUE,
+            '#label_display' => 'above',
+            '#view_mode' => 'full',
+            '#language' => LANGUAGE_NONE,
+            '#field_name' => 'field_fake_description',
+            '#field_type' => 'text',
+            '#entity_type' => 'product_type',
+            //'#bundle' => $entity->type_id,
+            '#items' => array(array('value' => $entity->name)),
+            '#formatter' => 'text_default',
+            0 => array('#markup' => check_plain($entity->name))
+        );
+        return parent::buildContent($entity, $view_mode, $langcode, $content);
     }
 }
 
